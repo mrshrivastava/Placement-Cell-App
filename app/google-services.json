@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "258038141966",
+    "firebase_url": "https://kiit-app-93db4-default-rtdb.firebaseio.com",
+    "project_id": "kiit-app-93db4",
+    "storage_bucket": "kiit-app-93db4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258038141966:android:56a583856a73b0f897185f",
+        "android_client_info": {
+          "package_name": "com.example.k_g"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU2tfrUsMj7HAirSCNWv1ih3McGsYjsZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
