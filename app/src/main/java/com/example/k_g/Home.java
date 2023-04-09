@@ -16,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -46,6 +48,7 @@ public class Home extends AppCompatActivity {
 
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
+    private String Name;
 
     @Override
     protected void onStart() {
@@ -69,7 +72,7 @@ public class Home extends AppCompatActivity {
         switch(item.getItemId())
         {
             case R.id.logout: SignOut();
-                                return true;
+                return true;
             default:return super.onOptionsItemSelected(item);
         }
 
@@ -83,7 +86,13 @@ public class Home extends AppCompatActivity {
         //getSupportActionBar(toolbar);
         //getSupportActionBar().hide();
 
+        FloatingActionButton upload=findViewById(R.id.floatingActionButton);
+        upload.setOnClickListener(view -> {
+            Intent intent=new Intent(Home.this,Upload.class);
+            intent.putExtra("keyname",Name);
+            startActivity(intent);
 
+        });
 
         gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -93,7 +102,7 @@ public class Home extends AppCompatActivity {
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
         if(account != null)
         {
-            String Name=account.getDisplayName();
+            Name=account.getDisplayName();
             String Mail= account.getEmail();
 
             if(Mail.indexOf("bit-bangalore.edu.in")==-1 && !Mail.equalsIgnoreCase("intonanalytics@gmail.com"))

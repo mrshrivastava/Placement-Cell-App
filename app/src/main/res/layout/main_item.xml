@@ -24,12 +24,13 @@
             android:id="@+id/img1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/source"
             android:adjustViewBounds="true"
             android:layout_centerHorizontal="true"
             android:src="@drawable/inton"
             android:padding="2dp"
             android:scaleType="centerCrop"
-             />
+            />
 
         <TextView
             android:id="@+id/desc"
@@ -45,36 +46,23 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/source1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/desc"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="source :"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:padding="2dp"
-            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/source"
-            android:layout_width="wrap_content"
+            android:layout_width="341dp"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/source1"
-            android:layout_below="@id/desc"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="source name"
+
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
             android:padding="2dp"
+
+            android:text="source name"
             android:textColor="@color/black"
+
             android:textFontWeight="@integer/material_motion_duration_long_1"
-
             android:textSize="20sp"
-            android:textStyle="normal"
-
-            />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

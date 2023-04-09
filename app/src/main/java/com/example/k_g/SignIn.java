@@ -35,7 +35,7 @@ public class SignIn extends AppCompatActivity {
         google_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               signinfunc();
+                signinfunc();
             }
         });
     }
