@@ -8,9 +8,10 @@ public class MainModel {
         this.img = img;
         this.desc = desc;
         this.source = source;
+        this.link=link;
     }
 
-    String img,desc,source;
+    String img,desc,link,source;
 
     public String getImg() {
         return img;
@@ -34,5 +35,13 @@ public class MainModel {
 
     public void setSource(String source) {
         this.source = source;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

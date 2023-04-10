@@ -1,69 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="379dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
     android:elevation="10dp"
-    android:layout_marginLeft="15dp"
-    android:layout_marginRight="15dp"
-    android:padding="2dp"
-    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginBottom="1dp"
+    android:layout_marginTop="1dp"
+    android:paddingBottom="5dp"
     app:cardPreventCornerOverlap="true"
-
     app:cardUseCompatPadding="true">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:padding="10dp">
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="source name"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/img1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/source"
+            android:layout_height="320dp"
             android:adjustViewBounds="true"
-            android:layout_centerHorizontal="true"
+
             android:src="@drawable/inton"
-            android:padding="2dp"
+            android:outlineSpotShadowColor="#C1BEBE"
             android:scaleType="centerCrop"
             />
 
         <TextView
             android:id="@+id/desc"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:padding="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:text="description"
             android:textColor="@color/black"
-            android:textFontWeight="@integer/material_motion_duration_long_1"
             android:textSize="20sp"
-            android:textStyle="bold" />
-
+            android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/source"
-            android:layout_width="341dp"
+            android:id="@+id/link"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="link"
+            android:textColor="#71BDFA"
+            android:textSize="14sp"
+            android:textStyle="italic" />
 
-
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="8dp"
-            android:padding="2dp"
-
-            android:text="source name"
-            android:textColor="@color/black"
-
-            android:textFontWeight="@integer/material_motion_duration_long_1"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

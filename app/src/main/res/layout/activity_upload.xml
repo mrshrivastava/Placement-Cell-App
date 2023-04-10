@@ -31,14 +31,6 @@
                     android:inputType="textMultiLine" />
 
 
-
-
-
-
-
-
-
-
             <Button
                 android:layout_width="200dp"
                 android:layout_height="60dp"
