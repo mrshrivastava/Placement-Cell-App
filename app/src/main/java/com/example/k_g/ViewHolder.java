@@ -12,7 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ViewHolder extends RecyclerView.ViewHolder{
 
@@ -40,12 +43,18 @@ public class ViewHolder extends RecyclerView.ViewHolder{
 
     }
 
-    public void setDetails(Context ctx, String desc,String img, String link,String source)
+    public void setDetails(Context ctx, String desc,String dpimg,String img,String link,String pdate,String ptime,String source)
     {
         TextView mdesc=mview.findViewById(R.id.desc);
         TextView msource=mview.findViewById(R.id.source);
         TextView mlink=mview.findViewById(R.id.link);
         ImageView mimg=mview.findViewById(R.id.img1);
+        CircleImageView mdpimg=mview.findViewById(R.id.dpimg);
+        TextView mpdate=mview.findViewById(R.id.pdate);
+        TextView mptime=mview.findViewById(R.id.ptime);
+        Picasso.get().load(dpimg).into(mdpimg);
+        mpdate.setText(pdate);
+        mptime.setText(ptime);
         mdesc.setText(desc);
         Picasso.get().load(img).into(mimg);
         msource.setText(source);

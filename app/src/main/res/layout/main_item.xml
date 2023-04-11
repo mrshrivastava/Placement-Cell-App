@@ -18,18 +18,39 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_vertical">
-        <TextView
-            android:id="@+id/source"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="source name"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="20sp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="2dp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/inton"
+                android:id="@+id/dpimg"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                android:layout_marginStart="10dp">
+
+
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="source name"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
 
         <ImageView
             android:id="@+id/img1"
@@ -49,8 +70,8 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:fontFamily="sans-serif-medium"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="description"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -60,13 +81,42 @@
             android:id="@+id/link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="link"
             android:textColor="#71BDFA"
             android:textSize="14sp"
             android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/pdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="#77797B"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/ptime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="#77797B"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

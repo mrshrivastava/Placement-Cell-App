@@ -153,7 +153,7 @@ public class Home extends AppCompatActivity {
         firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<MainModel, ViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull MainModel model) {
-                holder.setDetails(getApplicationContext(),model.getDesc(), model.getImg(),model.getLink(),model.getSource());
+                holder.setDetails(getApplicationContext(),model.getDesc(),model.getDpimg(), model.getImg(),model.getLink(),model.getPdate(),model.getPtime(),model.getSource());
                 holder.itemView.findViewById(R.id.link).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

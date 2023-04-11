@@ -9,9 +9,36 @@ public class MainModel {
         this.desc = desc;
         this.source = source;
         this.link=link;
+        this.dpimg=dpimg;
+        this.pdate=pdate;
+        this.ptime=ptime;
     }
 
-    String img,desc,link,source;
+    String img,desc,link,source,dpimg,pdate,ptime;
+
+    public String getDpimg() {
+        return dpimg;
+    }
+
+    public void setDpimg(String dpimg) {
+        this.dpimg = dpimg;
+    }
+
+    public String getPdate() {
+        return pdate;
+    }
+
+    public void setPdate(String pdate) {
+        this.pdate = pdate;
+    }
+
+    public String getPtime() {
+        return ptime;
+    }
+
+    public void setPtime(String ptime) {
+        this.ptime = ptime;
+    }
 
     public String getImg() {
         return img;
