@@ -86,13 +86,7 @@ public class Home extends AppCompatActivity {
         //getSupportActionBar(toolbar);
         //getSupportActionBar().hide();
 
-        FloatingActionButton upload=findViewById(R.id.floatingActionButton);
-        upload.setOnClickListener(view -> {
-            Intent intent=new Intent(Home.this,Upload.class);
-            intent.putExtra("keyname",Name);
-            startActivity(intent);
 
-        });
 
         gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
