@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
     TextView text;
     ImageView image;
     Animation u_anim,b_anim;
@@ -43,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally{
+
                     Intent intent=new Intent(MainActivity.this,SignIn.class);
                     startActivity(intent);
                     finish();

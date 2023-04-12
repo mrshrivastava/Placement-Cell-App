@@ -29,6 +29,16 @@
                     android:hint="Description"
                     android:padding="10dp"
                     android:inputType="textMultiLine" />
+            <EditText
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="link"
+                android:padding="10dp"
+                android:inputType="textMultiLine" />
 
 
             <Button

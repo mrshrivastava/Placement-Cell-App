@@ -29,13 +29,16 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Upload extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST=1;
 
     private Button mButtonChooseImage;
     private Button mButtonUpload;
     private EditText mEditTextDescription;
-    private EditText mEditTextSource;
+    private EditText mEditTextLink;
     private ImageView mImageView;
     private ProgressBar mProgressBar;
 
@@ -45,7 +48,7 @@ public class Upload extends AppCompatActivity {
     private DatabaseReference mDatabaseRef;
 
     private String source;
-
+    private String mdpimg;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +56,11 @@ public class Upload extends AppCompatActivity {
         setContentView(R.layout.activity_upload);
         getSupportActionBar().hide();
         source=getIntent().getStringExtra("keyname");
+        mdpimg=getIntent().getStringExtra("Imgurl");
         mButtonChooseImage=findViewById(R.id.addImage);
         mButtonUpload=findViewById(R.id.uploadimage);
         mEditTextDescription=findViewById(R.id.description);
-
+        mEditTextLink=findViewById(R.id.link);
         mImageView=(ImageView) findViewById(R.id.imageview);
         mProgressBar=findViewById(R.id.uploadbar);
 
@@ -93,8 +97,13 @@ public class Upload extends AppCompatActivity {
                         Task<Uri> uri = taskSnapshot.getStorage().getDownloadUrl();
                         while(!uri.isComplete());
                         Uri url = uri.getResult();
-                        Uploadmodel uploadmodel=new Uploadmodel(mEditTextDescription.getText().toString().trim()
-                                ,url.toString(),source);
+                        Calendar calender=Calendar.getInstance();
+                        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("E, dd MMM yyyy");
+                        String pdate=simpleDateFormat.format(calender.getTime());
+                        SimpleDateFormat simpletimeFormat=new SimpleDateFormat("HH:mm");
+                        String ptime=simpletimeFormat.format(calender.getTime());
+                        Uploadmodel uploadmodel=new Uploadmodel(mEditTextDescription.getText().toString().trim(),mdpimg
+                                ,url.toString(),mEditTextLink.getText().toString(),pdate,ptime,source);
                         String uploadId=mDatabaseRef.push().getKey();
                         mDatabaseRef.child(uploadId).setValue(uploadmodel);
                     }

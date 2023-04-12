@@ -49,6 +49,7 @@ public class Home extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     private String Name;
+    private String url;
 
     @Override
     protected void onStart() {
@@ -86,7 +87,13 @@ public class Home extends AppCompatActivity {
         //getSupportActionBar(toolbar);
         //getSupportActionBar().hide();
 
-
+        FloatingActionButton upload=findViewById(R.id.floatingActionButton);
+        upload.setOnClickListener(view -> {
+                    Intent intent = new Intent(Home.this, Upload.class);
+                    intent.putExtra("keyname", Name);
+                    intent.putExtra("Imgurl",url);
+                    startActivity(intent);
+                });
 
         gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -98,6 +105,7 @@ public class Home extends AppCompatActivity {
         {
             Name=account.getDisplayName();
             String Mail= account.getEmail();
+            url=account.getPhotoUrl().toString();
 
             if(Mail.indexOf("bit-bangalore.edu.in")==-1 && !Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
             {

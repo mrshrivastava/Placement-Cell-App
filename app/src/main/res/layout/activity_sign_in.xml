@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#050710"
+    android:background="@drawable/signup_page_bg"
     android:gravity="center"
     tools:context=".SignIn">
-<ImageView
-    android:layout_width="340dp"
-    android:layout_height="60dp"
-    android:src="@drawable/img"
-    android:id="@+id/signin">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signin"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:background="@drawable/signup_button"
+        android:backgroundTint="#09FBDA"
+        android:drawableLeft="@drawable/googlepng"
+        android:letterSpacing="0.05"
+        android:text="Sign Up With Google"
+        android:textColor="@color/black"
+        android:textSize="20sp"
 
-</ImageView>
-</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82" />
+</androidx.constraintlayout.widget.ConstraintLayout>
