@@ -36,7 +36,7 @@ import java.util.ArrayList;
 
 public class Home extends AppCompatActivity {
 
-    ArrayList<String> list=new ArrayList<>();
+
 
     RecyclerView recyclerView;
 
@@ -105,7 +105,15 @@ public class Home extends AppCompatActivity {
         {
             Name=account.getDisplayName();
             String Mail= account.getEmail();
-            url=account.getPhotoUrl().toString();
+            Uri url_link=account.getPhotoUrl();
+            try {
+                url=url_link.toString();
+            }
+            catch (NullPointerException e)
+            {
+                url="";
+            }
+
 
             if(Mail.indexOf("bit-bangalore.edu.in")==-1 && !Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
             {

@@ -28,18 +28,21 @@ public class SignIn extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
         //getSupportActionBar().hide();
 
-        google_img=findViewById(R.id.signin);
+        google_img=(AppCompatButton) findViewById(R.id.signin);
         gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
 
         gsc= GoogleSignIn.getClient(this,gso);
-        google_img.setOnClickListener(new View.OnClickListener() {
+        google_img.setOnClickListener(view -> {
+            signinfunc();
+        });
+       /* google_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signinfunc();
             }
-        });
+        });*/
     }
 
     private void signinfunc() {

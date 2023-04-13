@@ -7,24 +7,26 @@
     android:background="@drawable/signup_page_bg"
     android:gravity="center"
     tools:context=".SignIn">
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signin"
-        android:layout_width="310dp"
-        android:layout_height="60dp"
-        android:background="@drawable/signup_button"
+        android:layout_width="323dp"
+        android:layout_height="73dp"
         android:backgroundTint="#09FBDA"
         android:drawableLeft="@drawable/googlepng"
         android:letterSpacing="0.05"
         android:text="Sign Up With Google"
         android:textColor="@color/black"
         android:textSize="20sp"
-
-
-
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82" />
+        app:layout_constraintVertical_bias="0.82">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
