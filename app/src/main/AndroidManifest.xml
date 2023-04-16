@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KG">
         <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".postview"
+            android:exported="false" />
+        <activity
             android:name=".Upload"
             android:exported="false" />
         <activity

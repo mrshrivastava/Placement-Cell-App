@@ -93,6 +93,7 @@ public class Home extends AppCompatActivity {
                     intent.putExtra("keyname", Name);
                     intent.putExtra("Imgurl",url);
                     startActivity(intent);
+                    finish();
                 });
 
         gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -111,7 +112,7 @@ public class Home extends AppCompatActivity {
             }
             catch (NullPointerException e)
             {
-                url="";
+                url="https://firebasestorage.googleapis.com/v0/b/kiit-app-93db4.appspot.com/o/uploads%2Fuser%20image.jpg?alt=media&token=dd3b3a30-e4ab-425a-b45c-ee965251ae69";
             }
 
 
@@ -163,12 +164,32 @@ public class Home extends AppCompatActivity {
         firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<MainModel, ViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull MainModel model) {
-                holder.setDetails(getApplicationContext(),model.getDesc(),model.getDpimg(), model.getImg(),model.getLink(),model.getPdate(),model.getPtime(),model.getSource());
+                String desc=model.getDesc();
+                String link= model.getLink();
+                String img=model.getImg();
+                if(desc.equalsIgnoreCase("no description"))
+                    desc=" ";
+                if(link.equalsIgnoreCase("no link"))
+                    link=" ";
+
+                holder.setDetails(getApplicationContext(),desc,model.getDpimg(), img,link,model.getPdate(),model.getPtime(),model.getSource());
                 holder.itemView.findViewById(R.id.link).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         String accesslink=model.getLink();
-                        gotoUrl(accesslink);
+                        if(!accesslink.equalsIgnoreCase("no link"))
+                        {
+                            gotoUrl(accesslink);
+                        }
+
+                    }
+                });
+                holder.itemView.findViewById(R.id.img1).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent=new Intent(Home.this,postview.class);
+                        intent.putExtra("imgurl",model.getImg());
+                        startActivity(intent);
                     }
                 });
 
