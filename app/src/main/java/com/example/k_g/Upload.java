@@ -102,7 +102,10 @@ public class Upload extends AppCompatActivity {
                 {
                     link=mEditTextLink.getText().toString();
                 }
+                ProgressBar bar=findViewById(R.id.progressbar);
+                bar.setVisibility(View.VISIBLE);
                 uploadFile();
+
             }
 
         });
