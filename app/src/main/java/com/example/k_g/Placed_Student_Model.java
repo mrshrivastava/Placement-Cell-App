@@ -5,39 +5,17 @@ public class Placed_Student_Model {
 
 
     public Placed_Student_Model() {
-        this.name = name;
-        this.company = company;
-        this.pkg = pkg;
+
         this.batch=batch;
         this.branch=branch;
-        this.contact=contact;
-    }
-
-    String name,company,pkg,batch,branch,contact;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
         this.company = company;
-    }
-
-    public String getPkg() {
-        return pkg;
-    }
-
-    public void setPkg(String pkg) {
+        this.contact=contact;
+        this.img=img;
+        this.name = name;
         this.pkg = pkg;
     }
+
+    String batch,branch,company,contact,img,name,pkg;
 
     public String getBatch() {
         return batch;
@@ -55,11 +33,43 @@ public class Placed_Student_Model {
         this.branch = branch;
     }
 
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
     public String getContact() {
         return contact;
     }
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPkg() {
+        return pkg;
+    }
+
+    public void setPkg(String pkg) {
+        this.pkg = pkg;
     }
 }
