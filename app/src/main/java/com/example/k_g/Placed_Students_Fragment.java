@@ -99,17 +99,17 @@ public class Placed_Students_Fragment extends Fragment {
 
 
                 holder.setDetails(getContext(),model.getBatch(),model.getBranch(),model.getCompany(),model.getContact(),model.getImg(),model.getName(), model.getPkg());
-                holder.itemView.findViewById(R.id.contact).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        String accesslink=model.getContact();
-                        if(!accesslink.equalsIgnoreCase("no link"))
-                        {
-                            gotoUrl(accesslink);
-                        }
-
-                    }
-                });
+//                holder.itemView.findViewById(R.id.contact).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        String accesslink=model.getContact();
+//                        if(!accesslink.equalsIgnoreCase("no link"))
+//                        {
+//                            gotoUrl(accesslink);
+//                        }
+//
+//                    }
+//                });
 //                holder.itemView.findViewById(R.id.img1).setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View view) {

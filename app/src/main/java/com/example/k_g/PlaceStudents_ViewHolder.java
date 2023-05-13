@@ -40,20 +40,20 @@ public class PlaceStudents_ViewHolder extends RecyclerView.ViewHolder{
 
     public void setDetails(Context ctx, String batch,String branch,String company,String contact,String img,String name,String pkg)
     {
-        TextView mbatch=mview.findViewById(R.id.batch);
-        TextView mbranch=mview.findViewById(R.id.Branch);
+//        TextView mbatch=mview.findViewById(R.id.batch);
+//        TextView mbranch=mview.findViewById(R.id.Branch);
         TextView mcompany=mview.findViewById(R.id.company);
-        TextView mcontact=mview.findViewById(R.id.contact);
-        CircleImageView mimg=mview.findViewById(R.id.dpimg);
+//        TextView mcontact=mview.findViewById(R.id.contact);
+        CircleImageView mimg=mview.findViewById(R.id.img);
         TextView mname=mview.findViewById(R.id.name);
         TextView mpkg=mview.findViewById(R.id.pkg);
         Picasso.get().load(img).into(mimg);
-        mbatch.setText(batch);
-        mbranch.setText(branch);
+//        mbatch.setText(batch);
+//        mbranch.setText(branch);
         mcompany.setText(company);
 
 
-        mcontact.setText(contact);
+//        mcontact.setText(contact);
         mname.setText(name);
         mpkg.setText(pkg);
 

@@ -38,16 +38,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-//            case R.id.nav_home: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home_Fragment()).commit();
+        int itemId = item.getItemId();//            case R.id.nav_home: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home_Fragment()).commit();
 //                break;
-
-            case R.id.nav_learn:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new placement_fragment()).commit();
-                break;
-
-            case R.id.nav_placed_student: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Placed_Students_Fragment()).commit();
-                break;
+        if (itemId == R.id.nav_learn) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new placement_fragment()).commit();
+        } else if (itemId == R.id.nav_placed_student) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Placed_Students_Fragment()).commit();
 
 //            case R.id.nav_complaint: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Complaint_Fragment()).commit();
 //                break;
