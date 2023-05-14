@@ -23,9 +23,9 @@
             android:title="Placed Students"></item>
 
         <item
-            android:id="@+id/nav_complaint"
+            android:id="@+id/nav_past_companies"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Complaint"></item>
+            android:title="Past Companies"></item>
 
         <item
             android:id="@+id/nav_cust_support"

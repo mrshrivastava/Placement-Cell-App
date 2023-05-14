@@ -38,15 +38,19 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();//            case R.id.nav_home: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home_Fragment()).commit();
-//                break;
-        if (itemId == R.id.nav_learn) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new placement_fragment()).commit();
-        } else if (itemId == R.id.nav_placed_student) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Placed_Students_Fragment()).commit();
+        switch (item.getItemId())
+        {
+            case R.id.nav_home: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new placement_fragment()).commit();
+                break;
 
-//            case R.id.nav_complaint: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Complaint_Fragment()).commit();
+//            case R.id.nav_learn: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Learn_Fragment()).commit();
 //                break;
+
+            case R.id.nav_placed_student: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Placed_Students_Fragment()).commit();
+                break;
+
+            case R.id.nav_past_companies: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Past_Companies_Fragment()).commit();
+                break;
 
 //            case R.id.nav_cust_support: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Customer_Support_Fragment()).commit();
 //                break;
