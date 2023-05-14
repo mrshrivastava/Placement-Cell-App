@@ -118,6 +118,18 @@ public class Past_Companies_Fragment extends Fragment {
 //                        startActivity(intent);
 //                    }
 //                });
+                holder.itemView.setOnClickListener(view -> {
+                    Intent intent=new Intent(getContext(),Past_Company_Visited_Postview.class);
+                    intent.putExtra("batch",model.getBatch());
+                    intent.putExtra("branch",model.getBranch());
+                    intent.putExtra("company",model.getCompany());
+                    intent.putExtra("sem",model.getSem());
+                    intent.putExtra("hired",model.getHired());
+                    intent.putExtra("pkg",model.getPkg());
+                    intent.putExtra("desc",model.getDesc());
+                    intent.putExtra("img",model.getImg());
+                    startActivity(intent);
+                });
 
 
             }
@@ -131,9 +143,6 @@ public class Past_Companies_Fragment extends Fragment {
 
                     @Override
                     public void onItemClick(View view, int position) {
-
-
-
                         Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT);
                     }
 
