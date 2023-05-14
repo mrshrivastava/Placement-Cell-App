@@ -84,21 +84,28 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    <LinearLayout
+        android:layout_width="357dp"
+        android:layout_height="522dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="244dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/past_visited_company_postview_bottombg"
+
+        android:elevation="3dp"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="320dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            android:background="@drawable/past_visited_company_postview_bottombg"
-            android:elevation="3dp"
-
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.485"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.883">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,8 +133,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-
                     android:text="Batch"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25sp"
 
@@ -160,8 +167,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-
                     android:text="branch"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25sp"
 
@@ -195,8 +202,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-
                     android:text="Sem"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25sp"
 
@@ -214,28 +221,63 @@
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="57dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_weight="1"
 
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Package :"
+                    android:text="Package"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
+
 
                 <TextView
                     android:id="@+id/pkg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="80dp"
-
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Package :"
+                    android:layout_weight="1"
+                    android:text="Package"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
 
-
+                    />
             </LinearLayout>
+
+
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginLeft="15dp"-->
+            <!--            android:layout_marginTop="10dp"-->
+            <!--            android:layout_marginRight="15dp"-->
+            <!--            android:layout_marginBottom="10dp"-->
+            <!--            android:orientation="horizontal">-->
+
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+
+
+            <!--                android:fontFamily="sans-serif-condensed"-->
+            <!--                android:text="Package :"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="25sp" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/pkg"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="80dp"-->
+            <!--                android:fontFamily="sans-serif-condensed"-->
+            <!--                android:text="Package :"-->
+            <!--                android:textAlignment="center"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="25sp" />-->
+
+
+            <!--        </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -265,14 +307,28 @@
                     android:layout_marginStart="15dp"
                     android:layout_weight="1"
                     android:text="hired"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25sp"
 
                     />
             </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#E91E63" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
@@ -284,15 +340,18 @@
                     android:id="@+id/desc"
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dp"
                     android:ellipsize="end"
                     android:gravity="left"
                     android:maxLines="5"
                     android:singleLine="false"
                     android:text="desc"
                     android:textSize="25sp"></TextView>
-            </LinearLayout>
 
-        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
