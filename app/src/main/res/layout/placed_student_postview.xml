@@ -47,12 +47,12 @@
         </de.hdodenhof.circleimageview.CircleImageView>
 
         <TextView
-            android:id="@+id/company"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-medium"
-            android:text="Company"
+            android:text="Name"
             android:textColor="@color/white"
             android:textSize="25sp"
 
@@ -64,13 +64,13 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/gmail"
+            android:id="@+id/contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-medium"
-            android:text="Gmail"
-            android:textColor="@color/white"
+            android:text="LinkedIn"
+            android:textColor="#0B0080"
             android:textSize="25sp"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -192,13 +192,13 @@
                     android:layout_weight="1"
 
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Semester :"
+                    android:text="Company :"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
 
 
                 <TextView
-                    android:id="@+id/sem"
+                    android:id="@+id/company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -221,7 +221,7 @@
 
 
                 <TextView
-                    android:layout_width="106dp"
+                    android:layout_width="108dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
 
@@ -279,80 +279,20 @@
 
             <!--        </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
 
-
-                <TextView
-                    android:layout_width="62dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Students Hired :"
-                    android:textColor="@color/black"
-                    android:textSize="25sp" />
-
-
-                <TextView
-                    android:id="@+id/hired"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight="1"
-                    android:text="hired"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-
-                    />
             </LinearLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="320dp"
-            android:layout_height="3dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:background="#E91E63" />
 
-        <ScrollView
-            android:id="@+id/scrollView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/desc"
-                    android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_marginBottom="10dp"
-                    android:ellipsize="end"
-                    android:gravity="left"
-                    android:maxLines="5"
-                    android:singleLine="false"
-                    android:textColor="@color/black"
-                    android:text="desc"
-                    android:textSize="25sp"></TextView>
 
-            </LinearLayout>
-        </ScrollView>
 
-    </LinearLayout>
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
