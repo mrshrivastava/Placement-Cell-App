@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="310dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="0.4"
 
         android:background="@drawable/past_visited_company_postview_topbg"
         android:orientation="vertical"
@@ -84,11 +85,14 @@
 
 
     <LinearLayout
-        android:layout_width="357dp"
-        android:layout_height="522dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="0.9"
+        app:layout_constraintVertical_weight="0.8"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="244dp"
         android:layout_marginRight="18dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/past_visited_company_postview_bottombg"
 
         android:elevation="3dp"
