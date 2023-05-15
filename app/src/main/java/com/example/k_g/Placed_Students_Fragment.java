@@ -120,6 +120,19 @@ public class Placed_Students_Fragment extends Fragment {
 //                });
 
 
+                holder.itemView.setOnClickListener(view -> {
+                    Intent intent=new Intent(getContext(),Placed_Student_Postview.class);
+                    intent.putExtra("batch",model.getBatch());
+                    intent.putExtra("branch",model.getBranch());
+                    intent.putExtra("company",model.getCompany());
+                    intent.putExtra("pkg",model.getPkg());
+                    intent.putExtra("img",model.getImg());
+                    intent.putExtra("name",model.getName());
+                    intent.putExtra("contact",model.getContact());
+                    startActivity(intent);
+                });
+
+
             }
 
             @NonNull
