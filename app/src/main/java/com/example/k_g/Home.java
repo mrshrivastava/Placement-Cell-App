@@ -6,66 +6,111 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private DrawerLayout drawerLayout;
+public class Home extends AppCompatActivity {
+    RecyclerView recyclerView;
 
+    FirebaseDatabase mFirebaseDatabase;
+    DatabaseReference mDatabaseReference;
+    FirebaseRecyclerAdapter<MainModel,ViewHolder> firebaseRecyclerAdapter;
+    FirebaseRecyclerOptions<MainModel> options;
+    LinearLayoutManager mLinearLayoutManager;
+
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
+    private String Name;
+    private String url;
+    private String Mail;
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if(firebaseRecyclerAdapter != null)
+        {
+            firebaseRecyclerAdapter.startListening();
+        }
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
 
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new placement_fragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_home);
-        }
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId())
+        gsc= GoogleSignIn.getClient(this,gso);
+        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
+        if(account != null)
         {
-            case R.id.nav_home: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new placement_fragment()).commit();
-                break;
+            Name=account.getDisplayName();
+            Mail= account.getEmail();
 
-//            case R.id.nav_learn: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Learn_Fragment()).commit();
-//                break;
 
-            case R.id.nav_placed_student: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Placed_Students_Fragment()).commit();
-                break;
 
-            case R.id.nav_past_companies: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Past_Companies_Fragment()).commit();
-                break;
+            Uri url_link=account.getPhotoUrl();
+            try {
+                url=url_link.toString();
+            }
+            catch (NullPointerException e)
+            {
+                url="https://firebasestorage.googleapis.com/v0/b/kiit-app-93db4.appspot.com/o/uploads%2Fuser%20image.jpg?alt=media&token=dd3b3a30-e4ab-425a-b45c-ee965251ae69";
+            }
 
-//            case R.id.nav_cust_support: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Customer_Support_Fragment()).commit();
-//                break;
+
+            if(Mail.indexOf("bit-bangalore.edu.in")==-1 && !Mail.equalsIgnoreCase("intonanalytics@gmail.com") )
+            {
+                Toast.makeText(this, "Not an authorised user", Toast.LENGTH_SHORT).show();
+                SignOut();
+            }
+            else
+            {
+
+
+                Intent intent=new Intent(getApplicationContext(), MainPage.class);
+                intent.putExtra("mail",Mail);
+                startActivity(intent);
+                finish();
+            }
+
         }
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
+
+    }
+    private void SignOut() {
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Intent intent=new Intent(getApplicationContext(), SignIn.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
 }
 

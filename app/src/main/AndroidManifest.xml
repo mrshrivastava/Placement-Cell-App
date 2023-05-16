@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KG">
         <activity
+            android:name=".MainPage"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
             android:name=".Placed_Student_Postview"
             android:exported="false" />
         <activity

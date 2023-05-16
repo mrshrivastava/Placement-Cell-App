@@ -23,6 +23,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -42,15 +43,7 @@ public class placement_fragment extends Fragment {
     private String Name;
     private String url;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        if(firebaseRecyclerAdapter != null)
-        {
-            firebaseRecyclerAdapter.startListening();
-        }
 
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,33 +52,16 @@ public class placement_fragment extends Fragment {
         View v=inflater.inflate(R.layout.placement_fragment, container, false);
 
 
-        gso=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
+        assert getArguments() != null;
+        String Mail = getArguments().getString("mail");
 
-        gsc= GoogleSignIn.getClient(getContext(),gso);
-        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(getContext());
-        if(account != null)
+        FloatingActionButton upload=v.findViewById(R.id.uploadbutton);
+
+        if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
         {
-            Name=account.getDisplayName();
-            String Mail= account.getEmail();
-            Uri url_link=account.getPhotoUrl();
-            try {
-                url=url_link.toString();
-            }
-            catch (NullPointerException e)
-            {
-                url="https://firebasestorage.googleapis.com/v0/b/kiit-app-93db4.appspot.com/o/uploads%2Fuser%20image.jpg?alt=media&token=dd3b3a30-e4ab-425a-b45c-ee965251ae69";
-            }
-
-
-            if(Mail.indexOf("bit-bangalore.edu.in")==-1 && !Mail.equalsIgnoreCase("intonanalytics@gmail.com") && !Mail.equalsIgnoreCase("rajswapnil31@gmail.com"))
-            {
-                Toast.makeText(getContext(), "Not an authorised user", Toast.LENGTH_SHORT).show();
-                SignOut();
-            }
-
+            upload.setVisibility(View.VISIBLE);
         }
+
 
 
 
@@ -115,16 +91,7 @@ public class placement_fragment extends Fragment {
     }
 
 
-    private void SignOut() {
-        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
 
-                startActivity(new Intent(getContext(),SignIn.class));
-                getActivity().finish();
-            }
-        });
-    }
 
     private void showkiit() {
         options=new FirebaseRecyclerOptions.Builder<MainModel>().setQuery(mDatabaseReference,MainModel.class).build();
