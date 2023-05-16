@@ -9,28 +9,25 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@drawable/home_icon"
             android:title="Home"></item>
 
-        <item
-            android:id="@+id/nav_learn"
-            android:icon="@drawable/ic_home_black_24dp"
-            android:title="Placement"></item>
+
 
         <item
             android:id="@+id/nav_placed_student"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@drawable/placed_student_icon"
             android:title="Placed Students"></item>
 
         <item
             android:id="@+id/nav_past_companies"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@drawable/past_companies_icon"
             android:title="Past Companies"></item>
 
         <item
-            android:id="@+id/nav_cust_support"
-            android:icon="@drawable/ic_home_black_24dp"
-            android:title="Customer Care"></item>
+            android:id="@+id/logout"
+            android:icon="@drawable/logout_icon"
+            android:title="LogOut"></item>
 
     </group>
 

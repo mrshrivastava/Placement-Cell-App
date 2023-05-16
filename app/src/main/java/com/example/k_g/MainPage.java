@@ -7,10 +7,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -18,7 +24,9 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
 
     Bundle bundle;
 
+    private GoogleSignInOptions gso;
 
+    private GoogleSignInClient gsc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +35,13 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         setSupportActionBar(toolbar);
 
         String Mail=getIntent().getStringExtra("mail");
+
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        gsc = GoogleSignIn.getClient(this, gso);
 
 
         bundle=new Bundle();
@@ -73,8 +88,8 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,obj3).commit();
                 break;
 
-//            case R.id.nav_cust_support: getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Customer_Support_Fragment()).commit();
-//                break;
+            case R.id.logout: SignOut();
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
@@ -87,5 +102,16 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         } else {
             super.onBackPressed();
         }
+    }
+    private void SignOut() {
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Intent intent=new Intent(getApplicationContext(), SignIn.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
     }
 }
