@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.KG" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#2dbd6e</item>
+        <item name="colorPrimary">#00DB49</item>
         <item name="colorPrimaryVariant">#050710</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
