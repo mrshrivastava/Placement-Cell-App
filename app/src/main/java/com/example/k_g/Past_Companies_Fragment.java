@@ -1,5 +1,7 @@
 package com.example.k_g;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -42,6 +44,7 @@ public class Past_Companies_Fragment extends Fragment {
     GoogleSignInClient gsc;
     private String Name;
     private String url;
+    private String Mail;
 
     @Override
     public void onStart() {
@@ -60,8 +63,7 @@ public class Past_Companies_Fragment extends Fragment {
         View v=inflater.inflate(R.layout.fragment_past__companies_, container, false);
 
 
-
-        String Mail = getArguments().getString("mail");
+        Mail = getArguments().getString("mail");
 
         FloatingActionButton upload=v.findViewById(R.id.uploadbutton);
 
@@ -111,25 +113,28 @@ public class Past_Companies_Fragment extends Fragment {
 
 
                 holder.setDetails(getContext(),model.getBatch(),model.getBranch(),model.getCompany(),model.getImg(),model.getPkg(), model.getSem());
-//                holder.itemView.findViewById(R.id.contact).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        String accesslink=model.getContact();
-//                        if(!accesslink.equalsIgnoreCase("no link"))
-//                        {
-//                            gotoUrl(accesslink);
-//                        }
-//
-//                    }
-//                });
-//                holder.itemView.findViewById(R.id.img1).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Intent intent=new Intent(getContext(),postview.class);
-//                        intent.putExtra("imgurl",model.getImg());
-//                        startActivity(intent);
-//                    }
-//                });
+                holder.itemView.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        AlertDialog.Builder builder= new AlertDialog.Builder(holder.itemView.getContext());
+                        builder.setTitle("Are you sure you want to delete?");
+                        builder.setMessage("Deleted data can't be undo");
+                        builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FirebaseDatabase.getInstance().getReference().child("pastcompanies")
+                                        .child(getRef(holder.getAdapterPosition()).getKey()).removeValue();
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Toast.makeText(holder.itemView.getContext(), "Cancelled",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        builder.show();
+                    }
+                });
                 holder.itemView.setOnClickListener(view -> {
                     Intent intent=new Intent(getContext(),Past_Company_Visited_Postview.class);
                     intent.putExtra("batch",model.getBatch());
@@ -150,6 +155,10 @@ public class Past_Companies_Fragment extends Fragment {
             @Override
             public PastCompanies_ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.past_company_visited_cardview,parent,false);
+                if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
+                {
+                    itemView.findViewById(R.id.delete).setVisibility(View.VISIBLE);
+                }
                 PastCompanies_ViewHolder viewHolder=new PastCompanies_ViewHolder(itemView);
                 viewHolder.setOnClickListener(new PastCompanies_ViewHolder.ClickListener() {
 

@@ -1,5 +1,7 @@
 package com.example.k_g;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -42,6 +44,7 @@ public class placement_fragment extends Fragment {
     GoogleSignInClient gsc;
     private String Name;
     private String url;
+    private  String Mail;
 
 
 
@@ -53,7 +56,7 @@ public class placement_fragment extends Fragment {
 
 
         assert getArguments() != null;
-        String Mail = getArguments().getString("mail");
+        Mail = getArguments().getString("mail");
         String name=getArguments().getString("name");
         String dpurl=getArguments().getString("dp");
 
@@ -135,6 +138,29 @@ public class placement_fragment extends Fragment {
                     }
                 });
 
+                holder.itemView.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        AlertDialog.Builder builder= new AlertDialog.Builder(holder.itemView.getContext());
+                        builder.setTitle("Are you sure you want to delete?");
+                        builder.setMessage("Deleted data can't be undo");
+                        builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FirebaseDatabase.getInstance().getReference().child("kiit")
+                                        .child(getRef(holder.getAdapterPosition()).getKey()).removeValue();
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Toast.makeText(holder.itemView.getContext(), "Cancelled",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        builder.show();
+                    }
+                });
+
 
             }
 
@@ -142,6 +168,10 @@ public class placement_fragment extends Fragment {
             @Override
             public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.main_item,parent,false);
+                if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
+                {
+                    itemView.findViewById(R.id.delete).setVisibility(View.VISIBLE);
+                }
                 ViewHolder viewHolder=new ViewHolder(itemView);
                 viewHolder.setOnClickListener(new ViewHolder.ClickListener() {
 
