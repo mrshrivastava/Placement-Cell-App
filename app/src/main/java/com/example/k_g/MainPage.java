@@ -22,7 +22,9 @@ import com.google.android.material.navigation.NavigationView;
 public class MainPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
 
-    Bundle bundle;
+    private Bundle bundle;
+
+    private Bundle bundlehome;
 
     private GoogleSignInOptions gso;
 
@@ -35,6 +37,8 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         setSupportActionBar(toolbar);
 
         String Mail=getIntent().getStringExtra("mail");
+        String name=getIntent().getStringExtra("name");
+        String dpurl=getIntent().getStringExtra("dp");
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -47,6 +51,12 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         bundle=new Bundle();
         bundle.putString("mail",Mail);
 
+
+        bundlehome=new Bundle();
+        bundlehome.putString("mail",Mail);
+        bundlehome.putString("name",name);
+        bundlehome.putString("dp",dpurl);
+
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -57,7 +67,7 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
 
         if (savedInstanceState == null) {
             placement_fragment obj=new placement_fragment();
-            obj.setArguments(bundle);
+            obj.setArguments(bundlehome);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, obj).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
@@ -69,7 +79,7 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         {
             case R.id.nav_home:
                 placement_fragment obj1=new placement_fragment();
-                obj1.setArguments(bundle);
+                obj1.setArguments(bundlehome);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,obj1).commit();
                 break;
 

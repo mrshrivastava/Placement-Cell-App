@@ -54,6 +54,8 @@ public class placement_fragment extends Fragment {
 
         assert getArguments() != null;
         String Mail = getArguments().getString("mail");
+        String name=getArguments().getString("name");
+        String dpurl=getArguments().getString("dp");
 
         FloatingActionButton upload=v.findViewById(R.id.uploadbutton);
 
@@ -62,7 +64,10 @@ public class placement_fragment extends Fragment {
             upload.setVisibility(View.VISIBLE);
         }
         upload.setOnClickListener(view -> {
-            startActivity(new Intent(getContext(), Upload.class));
+            Intent intent=new Intent(getContext(), Upload.class);
+            intent.putExtra("name",name);
+            intent.putExtra("dp",dpurl);
+            startActivity(intent);
         });
 
 

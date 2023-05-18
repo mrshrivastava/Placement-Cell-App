@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Upload">
+    tools:context=".placed_student_upload_page">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +20,25 @@
                 android:orientation="vertical"
 
                 android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:drawableStart="@drawable/ic_baseline_description_24"
+                    android:drawablePadding="10dp"
+                    android:gravity="start|top"
+                    android:hint="Name"
+                    android:inputType="textMultiLine"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp"/>
 
                 <EditText
                     android:id="@+id/batch"
@@ -169,7 +188,7 @@
 
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/uploadimage"
+                    android:id="@+id/upload"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginVertical="1dp"

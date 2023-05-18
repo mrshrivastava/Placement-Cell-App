@@ -42,6 +42,7 @@ public class Home extends AppCompatActivity {
     private String Name;
     private String url;
     private String Mail;
+    private Uri url_link;
 
 
     @Override
@@ -72,7 +73,7 @@ public class Home extends AppCompatActivity {
 
 
 
-            Uri url_link=account.getPhotoUrl();
+            url_link=account.getPhotoUrl();
             try {
                 url=url_link.toString();
             }
@@ -93,6 +94,8 @@ public class Home extends AppCompatActivity {
 
                 Intent intent=new Intent(getApplicationContext(), MainPage.class);
                 intent.putExtra("mail",Mail);
+                intent.putExtra("name",Name);
+                intent.putExtra("dp",url);
                 startActivity(intent);
                 finish();
             }
