@@ -21,7 +21,6 @@ public class postview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postview);
-        getSupportActionBar().hide();
         String img=getIntent().getStringExtra("imgurl");
         post=(ImageView) findViewById(R.id.postimg);
         Picasso.get().load(img).into(post);
