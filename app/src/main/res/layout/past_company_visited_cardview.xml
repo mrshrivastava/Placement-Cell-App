@@ -40,7 +40,14 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
 
+                >
             <TextView
                 android:id="@+id/company"
                 android:layout_width="match_parent"
@@ -51,8 +58,18 @@
                 android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:textSize="20sp"
+                android:layout_weight="0.8"
                 android:textStyle="bold"
                 />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+
+                    android:src="@drawable/baseline_delete_outline_24"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

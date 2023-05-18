@@ -43,14 +43,23 @@
             </de.hdodenhof.circleimageview.CircleImageView>
             <TextView
                 android:id="@+id/source"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="source name"
+                android:layout_weight="1"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="0.1"
+                android:src="@drawable/baseline_delete_outline_24"
+                android:visibility="invisible"/>
 
 
         </LinearLayout>
