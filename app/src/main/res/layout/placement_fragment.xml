@@ -37,14 +37,15 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/uploadbutton"
         android:layout_width="wrap_content"
+        android:backgroundTint="#ace2fe"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:layout_marginEnd="10dp"
         android:clickable="true"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@drawable/baseline_add_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

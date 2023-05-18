@@ -83,9 +83,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_weight="0.2"
                     android:fontFamily="sans-serif-condensed"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
+
                     android:text="Batch :"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -98,10 +99,10 @@
                     android:layout_width="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_weight="0.2"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
                     android:text="Batch"
+                    android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     />
@@ -122,9 +123,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_weight="0.2"
                     android:fontFamily="sans-serif-condensed"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
                     android:text="Branch :"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -137,42 +138,91 @@
                     android:layout_width="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_weight="0.2"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:textAlignment="textStart"
+
                     android:text="Branch"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.2"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginStart="10dp"
+
+                    android:text="Semester :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    />
+
+
+                <TextView
+                    android:id="@+id/sem"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="Semester"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginStart="10dp"
+
+                    android:text="Package :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    />
+
+
+                <TextView
+                    android:id="@+id/pkg"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="Package"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     />
             </LinearLayout>
 
 
-                <TextView
-                    android:id="@+id/sem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Semester :"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
-                    />
-                <TextView
-                    android:id="@+id/pkg"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Package"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    />
+
 
 
 
