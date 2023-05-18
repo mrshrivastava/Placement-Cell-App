@@ -66,7 +66,6 @@ public class Upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
-        getSupportActionBar().hide();
         source=getIntent().getStringExtra("keyname");
         mdpimg=getIntent().getStringExtra("Imgurl");
         mButtonChooseImage=findViewById(R.id.addImage);

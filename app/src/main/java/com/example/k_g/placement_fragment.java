@@ -61,6 +61,9 @@ public class placement_fragment extends Fragment {
         {
             upload.setVisibility(View.VISIBLE);
         }
+        upload.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(), Upload.class));
+        });
 
 
 

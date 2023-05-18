@@ -23,6 +23,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -60,6 +61,17 @@ public class Past_Companies_Fragment extends Fragment {
 
 
 
+        String Mail = getArguments().getString("mail");
+
+        FloatingActionButton upload=v.findViewById(R.id.uploadbutton);
+
+        if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
+        {
+            upload.setVisibility(View.VISIBLE);
+        }
+        upload.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(),past_company_upload_page.class));
+        });
 
 
 
