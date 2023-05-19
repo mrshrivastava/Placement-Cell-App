@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441"
+        app:layout_constraintVertical_bias="0.281"
         app:srcCompat="@drawable/bitlogo" />
 
     <TextView
@@ -34,20 +34,38 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.324" />
+        app:layout_constraintVertical_bias="0.166" />
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="A Product From IntON"
-        android:textAlignment="center"
-        android:textColor="#013E6F"
-        android:textSize="16dp"
+    <LinearLayout
+        android:layout_width="437dp"
+        android:layout_height="144dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.324" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            android:text="A Product From IntON"
+            android:textAlignment="center"
+            android:textColor="#00affe"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:layout_width="427dp"
+            android:layout_height="94dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/inton_logo1" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
