@@ -39,9 +39,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:visibility="invisible"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#ace2fe"
         android:clickable="true"
         android:src="@drawable/baseline_add_24" />

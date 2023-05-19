@@ -12,6 +12,10 @@
     android:paddingBottom="5dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#00affe" />
 
 
     <LinearLayout
@@ -23,6 +27,8 @@
             android:layout_width="125dp"
             android:layout_height="125dp"
             android:src="@drawable/inton"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:id="@+id/img"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"

@@ -19,6 +19,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
 
+
                 android:gravity="center_horizontal">
 
                 <EditText
@@ -30,14 +31,11 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/edittext_style"
                     android:ems="10"
-                    android:drawableStart="@drawable/ic_baseline_description_24"
-                    android:drawablePadding="10dp"
                     android:gravity="start|top"
                     android:hint="Description"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"/>
                 <!--                -->
 
@@ -73,24 +71,17 @@
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_style"
                     android:layout_marginRight="10dp"
-                    android:drawableStart="@drawable/baseline_add_link_24" android:background="@drawable/edittext_style"
-                    android:drawablePadding="10dp"
                     android:ems="10"
                     android:gravity="start"
                     android:hint="Link"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
-                    android:minHeight="50dp"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"
                     android:visibility="gone"
-
-
                     >
-
-
                 </EditText>
 
 

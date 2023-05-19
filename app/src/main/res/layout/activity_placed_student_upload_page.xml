@@ -30,14 +30,11 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/edittext_style"
                     android:ems="10"
-                    android:drawableStart="@drawable/ic_baseline_description_24"
-                    android:drawablePadding="10dp"
                     android:gravity="start|top"
                     android:hint="Name"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"/>
 
                 <EditText
@@ -49,14 +46,11 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/edittext_style"
                     android:ems="10"
-                    android:drawableStart="@drawable/ic_baseline_description_24"
-                    android:drawablePadding="10dp"
                     android:gravity="start|top"
                     android:hint="Batch"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"/>
                 <EditText
                     android:id="@+id/branch"
@@ -67,14 +61,11 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/edittext_style"
                     android:ems="10"
-                    android:drawableStart="@drawable/ic_baseline_description_24"
-                    android:drawablePadding="10dp"
                     android:gravity="start|top"
                     android:hint="Branch"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"/>
                 <EditText
                     android:id="@+id/company"
@@ -85,14 +76,11 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/edittext_style"
                     android:ems="10"
-                    android:drawableStart="@drawable/ic_baseline_description_24"
-                    android:drawablePadding="10dp"
                     android:gravity="start|top"
                     android:hint="Company"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"/>
                 <EditText
                     android:id="@+id/contact"
@@ -103,14 +91,11 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/edittext_style"
                     android:ems="10"
-                    android:drawableStart="@drawable/ic_baseline_description_24"
-                    android:drawablePadding="10dp"
                     android:gravity="start|top"
                     android:hint="Linked In"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"/>
                 <EditText
                     android:id="@+id/pkg"
@@ -121,14 +106,11 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/edittext_style"
                     android:ems="10"
-                    android:drawableStart="@drawable/ic_baseline_description_24"
-                    android:drawablePadding="10dp"
                     android:gravity="start|top"
                     android:hint="Package"
-                    android:inputType="textMultiLine"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@drawable/edittext_style"
                     android:textSize="20sp"/>
                 <!--                -->
 
