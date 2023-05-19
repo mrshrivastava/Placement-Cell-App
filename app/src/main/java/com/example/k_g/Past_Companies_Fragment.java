@@ -88,15 +88,6 @@ public class Past_Companies_Fragment extends Fragment {
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference =mFirebaseDatabase.getReference("pastcompanies");
         showkiit();
-        /*TextView des=findViewById(R.id.desc);
-        des.setOnClickListener(view -> {
-            String link=des.getText().toString();
-            if(link!=null)
-            {
-                gotoUrl(link);
-            }
-        });*/
-
 
 
         return v;

@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        text=findViewById(R.id.textView);
+        //text=findViewById(R.id.textView);
         image=findViewById(R.id.imageView);
         u_anim= AnimationUtils.loadAnimation(this,R.anim.upper_animation);
         b_anim=AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
         image.setAnimation(u_anim);
-        text.setAnimation(b_anim);
+       // text.setAnimation(b_anim);
 
         Thread thread= new Thread(){
             public void run(){
