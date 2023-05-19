@@ -11,8 +11,8 @@
     tools:context=".MainActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="240dp"
-        android:layout_height="240dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:id="@+id/imageView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
