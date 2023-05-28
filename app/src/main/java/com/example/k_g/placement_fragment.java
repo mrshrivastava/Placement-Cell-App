@@ -46,6 +46,9 @@ public class placement_fragment extends Fragment {
     private String url;
     private  String Mail;
 
+    private String user;
+    private String CollegeDatabase;
+
 
 
     @Override
@@ -59,10 +62,12 @@ public class placement_fragment extends Fragment {
         Mail = getArguments().getString("mail");
         String name=getArguments().getString("name");
         String dpurl=getArguments().getString("dp");
+        user=getArguments().getString("user");
+        CollegeDatabase=getArguments().getString("database");
 
         FloatingActionButton upload=v.findViewById(R.id.uploadbutton);
 
-        if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
+        if(user.equalsIgnoreCase("admin"))
         {
             upload.setVisibility(View.VISIBLE);
         }
@@ -70,6 +75,7 @@ public class placement_fragment extends Fragment {
             Intent intent=new Intent(getContext(), Upload.class);
             intent.putExtra("name",name);
             intent.putExtra("dp",dpurl);
+            intent.putExtra("database",CollegeDatabase);
             startActivity(intent);
         });
 
@@ -85,16 +91,9 @@ public class placement_fragment extends Fragment {
         mLinearLayoutManager.setReverseLayout(true);
         mLinearLayoutManager.setStackFromEnd(true);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference =mFirebaseDatabase.getReference("kiit");
+        mDatabaseReference =mFirebaseDatabase.getReference(CollegeDatabase).child("notification");
         showkiit();
-        /*TextView des=findViewById(R.id.desc);
-        des.setOnClickListener(view -> {
-            String link=des.getText().toString();
-            if(link!=null)
-            {
-                gotoUrl(link);
-            }
-        });*/
+
 
 
 
@@ -147,7 +146,7 @@ public class placement_fragment extends Fragment {
                         builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                FirebaseDatabase.getInstance().getReference().child("kiit")
+                                FirebaseDatabase.getInstance().getReference(CollegeDatabase).child("notification")
                                         .child(getRef(holder.getAdapterPosition()).getKey()).removeValue();
                             }
                         });
@@ -168,7 +167,7 @@ public class placement_fragment extends Fragment {
             @Override
             public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.main_item,parent,false);
-                if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
+                if(user.equalsIgnoreCase("admin"))
                 {
                     itemView.findViewById(R.id.delete).setVisibility(View.VISIBLE);
                 }

@@ -39,6 +39,10 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         String Mail=getIntent().getStringExtra("mail");
         String name=getIntent().getStringExtra("name");
         String dpurl=getIntent().getStringExtra("dp");
+        String user=getIntent().getStringExtra("user");
+        String CollegeDatabase=getIntent().getStringExtra("database");
+
+        Log.d("Mianpage","Collge Database= "+CollegeDatabase);
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -50,12 +54,16 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
 
         bundle=new Bundle();
         bundle.putString("mail",Mail);
+        bundle.putString("database",CollegeDatabase);
+        bundle.putString("user",user);
 
 
         bundlehome=new Bundle();
         bundlehome.putString("mail",Mail);
         bundlehome.putString("name",name);
         bundlehome.putString("dp",dpurl);
+        bundlehome.putString("database",CollegeDatabase);
+        bundlehome.putString("user",user);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);

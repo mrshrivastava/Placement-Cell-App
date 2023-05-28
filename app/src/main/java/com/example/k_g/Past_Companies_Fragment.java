@@ -44,6 +44,7 @@ public class Past_Companies_Fragment extends Fragment {
     GoogleSignInClient gsc;
     private String Name;
     private String url;
+    private String user,CollegeDatabase;
     private String Mail;
 
     @Override
@@ -64,15 +65,19 @@ public class Past_Companies_Fragment extends Fragment {
 
 
         Mail = getArguments().getString("mail");
+        user=getArguments().getString("user");
+        CollegeDatabase=getArguments().getString("database");
 
         FloatingActionButton upload=v.findViewById(R.id.uploadbutton);
 
-        if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
+        if(user.equalsIgnoreCase("admin"))
         {
             upload.setVisibility(View.VISIBLE);
         }
         upload.setOnClickListener(view -> {
-            startActivity(new Intent(getContext(),past_company_upload_page.class));
+            Intent intent=new Intent(getContext(),past_company_upload_page.class);
+            intent.putExtra("database",CollegeDatabase);
+            startActivity(intent);
         });
 
 
@@ -86,7 +91,7 @@ public class Past_Companies_Fragment extends Fragment {
         mLinearLayoutManager.setReverseLayout(true);
         mLinearLayoutManager.setStackFromEnd(true);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference =mFirebaseDatabase.getReference("pastcompanies");
+        mDatabaseReference =mFirebaseDatabase.getReference(CollegeDatabase).child("pastcompanies");
         showkiit();
 
 
@@ -113,7 +118,7 @@ public class Past_Companies_Fragment extends Fragment {
                         builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                FirebaseDatabase.getInstance().getReference().child("pastcompanies")
+                                FirebaseDatabase.getInstance().getReference(CollegeDatabase).child("pastcompanies")
                                         .child(getRef(holder.getAdapterPosition()).getKey()).removeValue();
                             }
                         });
@@ -146,7 +151,7 @@ public class Past_Companies_Fragment extends Fragment {
             @Override
             public PastCompanies_ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.past_company_visited_cardview,parent,false);
-                if(Mail.equalsIgnoreCase("intonanalytics@gmail.com"))
+                if(user.equalsIgnoreCase("admin"))
                 {
                     itemView.findViewById(R.id.delete).setVisibility(View.VISIBLE);
                 }

@@ -58,6 +58,7 @@ public class Upload extends AppCompatActivity {
    // private String description,link;
     private String description="No description";
     private String link="no link";
+    private String CollegeDatabase;
 
 
     private String source;
@@ -68,14 +69,15 @@ public class Upload extends AppCompatActivity {
         setContentView(R.layout.activity_upload);
         source=getIntent().getStringExtra("name");
         mdpimg=getIntent().getStringExtra("dp");
+        CollegeDatabase=getIntent().getStringExtra("database");
         mButtonChooseImage=findViewById(R.id.addImage);
         mButtonUpload=findViewById(R.id.uploadimage);
         mEditTextDescription=findViewById(R.id.description);
         mEditTextLink=findViewById(R.id.link);
         mImageView=(ImageView) findViewById(R.id.imageview);
 
-        mStorageRef = FirebaseStorage.getInstance().getReference("uploads");
-        mDatabaseRef= FirebaseDatabase.getInstance().getReference("kiit");
+        mStorageRef = FirebaseStorage.getInstance().getReference(CollegeDatabase+"_uploads");
+        mDatabaseRef= FirebaseDatabase.getInstance().getReference(CollegeDatabase).child("notification");
         mAddLink=findViewById(R.id.addLink);
 
 

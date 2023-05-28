@@ -59,7 +59,7 @@ public class past_company_upload_page extends AppCompatActivity {
     private String description="No description";
     private String link="no link";
 
-
+    private String CollegeDatabase;
     private String source;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -67,8 +67,10 @@ public class past_company_upload_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_past_company_upload_page);
 
-        mStorageRef = FirebaseStorage.getInstance().getReference("past_company_uploads");
-        mDatabaseRef= FirebaseDatabase.getInstance().getReference("pastcompanies");
+        CollegeDatabase=getIntent().getStringExtra("database");
+
+        mStorageRef = FirebaseStorage.getInstance().getReference(CollegeDatabase+"_past_company_uploads");
+        mDatabaseRef= FirebaseDatabase.getInstance().getReference(CollegeDatabase).child("pastcompanies");
 
         mButtonChooseImage=findViewById(R.id.addImage);
 
