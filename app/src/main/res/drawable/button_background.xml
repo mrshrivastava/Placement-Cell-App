@@ -3,12 +3,12 @@
     <item android:state_pressed="true" >
         <shape android:shape = "rectangle">
             <gradient
-                android:startColor = "#00affe"
-                android:endColor ="#ace2fe"
+                android:startColor = "#FFAC1C"
+                android:endColor ="#CC5500"
                 android:angle = "180"
                 android:type = "linear" />
             <corners
-                android:radius="20dp" />
+                android:radius="5dp" />
             <padding
                 android:left="10dp"
                 android:top="10dp"
@@ -28,12 +28,12 @@
 
 
             <gradient
-                android:startColor = "#00affe"
-                android:endColor = "#ace2fe"
+                android:startColor = "#FFAC1C"
+                android:endColor ="#CC5500"
                 android:angle = "180"
                 android:type = "linear" />
             <corners
-                android:radius="20dp" />
+                android:radius="5dp" />
             <padding
                 android:left="10dp"
                 android:top="10dp"

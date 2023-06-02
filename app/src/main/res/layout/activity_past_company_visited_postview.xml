@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/black"
     android:layout_height="match_parent"
     >
 
@@ -135,7 +136,7 @@
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Batch :"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp" />
 
 
@@ -146,7 +147,7 @@
                         android:layout_weight="1"
                         android:text="Batch"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp"
 
                         />
@@ -169,7 +170,7 @@
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Branch :"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp" />
 
 
@@ -180,7 +181,7 @@
                         android:layout_weight="1"
                         android:text="branch"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp"
 
                         />
@@ -204,7 +205,7 @@
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Semester :"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp" />
 
 
@@ -215,7 +216,7 @@
                         android:layout_weight="1"
                         android:text="Sem"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp"
 
                         />
@@ -238,7 +239,7 @@
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Package"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp" />
 
 
@@ -249,7 +250,7 @@
                         android:layout_weight="1"
                         android:text="Package"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp"
 
                         />
@@ -307,7 +308,7 @@
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Students Hired :"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp" />
 
 
@@ -319,7 +320,7 @@
                         android:layout_weight="1"
                         android:text="hired"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25sp"
 
                         />
@@ -332,7 +333,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="15dp"
-                    android:background="#E91E63" />
+                    android:background="#00affe" />
 
                 <!--        <ScrollView-->
                 <!--            android:id="@+id/scrollView"-->
@@ -360,7 +361,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
                         android:singleLine="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:text="desc"
                         android:textSize="25sp">
 

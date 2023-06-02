@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/background2">
+        android:background="@color/black">
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -35,7 +35,8 @@
                     android:hint="Description"
                     android:letterSpacing="0.05"
                     android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
                     android:textSize="20sp"/>
                 <!--                -->
 
@@ -43,11 +44,12 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/addLink"
-                    android:layout_width="200dp"
-                    android:layout_height="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/button_background"
-                    android:drawableLeft="@drawable/linkpng"
                     android:letterSpacing="0.05"
 
 
@@ -87,11 +89,13 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/addImage"
-                    android:layout_width="200dp"
-                    android:layout_height="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/button_background"
-                    android:drawableLeft="@drawable/photopng"
+
                     android:letterSpacing="0.05"
 
 
@@ -132,11 +136,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginVertical="1dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/button_background"
-                    android:drawableLeft="@drawable/uploadpng"
                     android:letterSpacing="0.05"
                     android:text="Upload"
                     android:textAlignment="center"

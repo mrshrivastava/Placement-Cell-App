@@ -3,26 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
-    android:elevation="10dp"
-    android:layout_marginLeft="2dp"
-    android:layout_marginRight="2dp"
-    android:layout_marginBottom="1dp"
-    android:layout_marginTop="1dp"
-    android:paddingBottom="5dp"
     app:cardPreventCornerOverlap="true"
-    app:cardUseCompatPadding="true">
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#00affe" />
-
-
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:background="#0c0c0c"
+        android:paddingBottom="15dp">
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="125dp"
             android:layout_height="125dp"
@@ -58,12 +47,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Company"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:textSize="20sp"
                 android:layout_weight="0.8"
-                android:textStyle="bold"
                 />
                 <ImageView
                     android:layout_width="wrap_content"
@@ -92,7 +80,7 @@
                     android:layout_marginStart="10dp"
 
                     android:text="Batch :"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="normal"
                     />
@@ -107,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:text="Batch"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     />
             </LinearLayout>
@@ -131,7 +119,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:layout_marginStart="10dp"
                     android:text="Branch :"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="normal"
                     />
@@ -147,7 +135,7 @@
                     android:textAlignment="textStart"
 
                     android:text="Branch"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     />
             </LinearLayout>
@@ -168,7 +156,7 @@
                     android:layout_marginStart="10dp"
 
                     android:text="Semester :"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="normal"
                     />
@@ -183,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="textStart"
                     android:text="Semester"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     />
             </LinearLayout>
@@ -205,7 +193,7 @@
                     android:layout_marginStart="10dp"
 
                     android:text="Package :"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="normal"
                     />
@@ -220,7 +208,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="textStart"
                     android:text="Package"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     />
             </LinearLayout>

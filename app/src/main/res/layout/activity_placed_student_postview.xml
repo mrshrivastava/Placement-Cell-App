@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Placed_Student_Postview">
 
 
@@ -127,7 +128,7 @@
 
                     android:fontFamily="sans-serif-condensed"
                     android:text="Batch :"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
 
@@ -138,7 +139,7 @@
                     android:layout_weight="1"
                     android:text="Batch"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp"
 
                     />
@@ -161,7 +162,7 @@
 
                     android:fontFamily="sans-serif-condensed"
                     android:text="Branch :"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
 
@@ -172,7 +173,7 @@
                     android:layout_weight="1"
                     android:text="branch"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp"
 
                     />
@@ -196,7 +197,7 @@
 
                     android:fontFamily="sans-serif-condensed"
                     android:text="Company :"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
 
@@ -208,7 +209,7 @@
                     android:text="company"
 
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp"
 
                     />
@@ -231,7 +232,7 @@
 
                     android:fontFamily="sans-serif-condensed"
                     android:text="Package"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp" />
 
 
@@ -242,7 +243,7 @@
                     android:layout_weight="1"
                     android:text="Package"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp"
 
                     />

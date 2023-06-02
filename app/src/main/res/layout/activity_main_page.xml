@@ -27,7 +27,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_container"/>
+            android:id="@+id/fragment_container" />
 
 
 
@@ -38,10 +38,10 @@
         android:layout_height="match_parent"
         android:id="@+id/nav_view"
         android:layout_gravity="start"
-
+        android:background="#323232"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
         app:itemIconTint="#168AC6"
-        app:itemTextColor="@color/black"/>
+        app:itemTextColor="@color/white"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
