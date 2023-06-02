@@ -42,7 +42,7 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
         String user=getIntent().getStringExtra("user");
         String CollegeDatabase=getIntent().getStringExtra("database");
 
-        Log.d("Mianpage","Collge Database= "+CollegeDatabase);
+
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -106,8 +106,10 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,obj3).commit();
                 break;
 
-            case R.id.logout: SignOut();
-                break;
+            case R.id.logout:   User_Database db=new User_Database(this);
+                                db.deleteOneRow();
+                                SignOut();
+                                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

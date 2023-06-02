@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -24,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     CircleImageView image;
     Animation u_anim,b_anim;
 
-
+    private String mail,name,dp,user,database;
+    private int status;
 
 
     @Override
@@ -40,6 +42,18 @@ public class MainActivity extends AppCompatActivity {
         image.setAnimation(u_anim);
        // text.setAnimation(b_anim);
 
+        User_Database db=new User_Database(this);
+        Cursor cursor=db.readAllData();
+        while(cursor.moveToNext())
+        {
+            mail=cursor.getString(1);
+            name=cursor.getString(2);
+            dp=cursor.getString(3);
+            user=cursor.getString(4);
+            database=cursor.getString(5);
+            status=cursor.getInt(6);
+        }
+
         Thread thread= new Thread(){
             public void run(){
                 try{
@@ -49,10 +63,24 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally{
+                    if(status==1)
+                    {
+                        Intent intent=new Intent(MainActivity.this,MainPage.class);
+                        intent.putExtra("mail",mail);
+                        intent.putExtra("name",name);
+                        intent.putExtra("dp",dp);
+                        intent.putExtra("user",user);
+                        intent.putExtra("database",database);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else
+                    {
+                        Intent intent=new Intent(MainActivity.this,SignIn.class);
+                        startActivity(intent);
+                        finish();
+                    }
 
-                    Intent intent=new Intent(MainActivity.this,SignIn.class);
-                    startActivity(intent);
-                    finish();
                 }
             }
         };thread.start();

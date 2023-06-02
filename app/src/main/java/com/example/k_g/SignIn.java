@@ -141,6 +141,9 @@ public class SignIn extends AppCompatActivity {
                 .build();
 
         gsc= GoogleSignIn.getClient(this,gso);
+
+
+
         google_img.setOnClickListener(view -> {
             int radioId=radioGroup.getCheckedRadioButtonId();
             radioButton=findViewById(radioId);

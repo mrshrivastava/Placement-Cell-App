@@ -155,6 +155,8 @@ public class Home extends AppCompatActivity {
 
     private void mainpage()
     {
+        User_Database db=new User_Database(this);
+        db.addData(Mail,Name,url,selectedUser,CollegeDatabase,1);
         Intent intent=new Intent(getApplicationContext(), MainPage.class);
         intent.putExtra("mail",Mail);
         intent.putExtra("name",Name);
