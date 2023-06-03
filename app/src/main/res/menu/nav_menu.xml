@@ -30,6 +30,11 @@
             android:title="Past Companies"></item>
 
         <item
+            android:id="@+id/nav_placement_stats"
+            android:icon="@drawable/placement_statistics_icon"
+            android:title="Placement Statistics"></item>
+
+        <item
             android:id="@+id/logout"
             android:icon="@drawable/logout_icon"
             android:title="LogOut"></item>

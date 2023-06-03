@@ -106,6 +106,12 @@ public class MainPage extends AppCompatActivity implements NavigationView.OnNavi
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,obj3).commit();
                 break;
 
+            case R.id.nav_placement_stats:
+                Placement_Stats_Fragment obj4=new Placement_Stats_Fragment();
+                obj4.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,obj4).commit();
+                break;
+
             case R.id.logout:   User_Database db=new User_Database(this);
                                 db.deleteOneRow();
                                 SignOut();
