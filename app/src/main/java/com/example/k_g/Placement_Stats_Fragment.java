@@ -59,7 +59,7 @@ public class Placement_Stats_Fragment extends Fragment {
     private String avg_ctc_offered, highest_ctc_offered;
     private Calendar calendar=Calendar.getInstance();
 
-    private String selectedyear;
+    private String  selectedyear="y"+(calendar.get(Calendar.YEAR)-1);
 
 
     private TextView students_placed_textview, companies_came_textview, offers_textview, avg_ctc_textview, highest_ctc_textview;
@@ -78,9 +78,6 @@ public class Placement_Stats_Fragment extends Fragment {
         offers_textview=v.findViewById(R.id.offers);
         avg_ctc_textview=v.findViewById(R.id.avg_ctc);
         highest_ctc_textview=v.findViewById(R.id.highest_ctc);
-        selectedyear="y"+(calendar.get(Calendar.YEAR)-1);
-        Log.d("g","\n\n\n\nSelected year="+selectedyear);
-
         setData();
 
 

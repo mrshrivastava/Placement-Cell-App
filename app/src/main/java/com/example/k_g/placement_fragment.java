@@ -47,6 +47,9 @@ public class placement_fragment extends Fragment {
     private  String Mail;
 
     private String user;
+
+
+
     private String CollegeDatabase;
 
 
