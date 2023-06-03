@@ -25,7 +25,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="320dp"
-            android:src="@drawable/circles"
+            android:src="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:src="@drawable/inton"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="#bb86fc"
             app:civ_border_width="2dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
             android:fontFamily="sans-serif-medium"
             android:text="Company"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -107,48 +107,47 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0">
         <ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical">
+            android:scrollbars="vertical"
+            android:elevation="8dp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_margin="15dp"
                     android:orientation="horizontal">
 
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Batch :"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
 
                     <TextView
                         android:id="@+id/batch"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Batch"
-                        android:textAlignment="center"
+
+
                         android:textColor="@color/white"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
 
                         />
                 </LinearLayout>
@@ -156,33 +155,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
+
+                    android:layout_margin="15dp"
                     android:orientation="horizontal">
 
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Branch :"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
 
                     <TextView
                         android:id="@+id/branch"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="branch"
-                        android:textAlignment="center"
+
+
                         android:textColor="@color/white"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
 
                         />
                 </LinearLayout>
@@ -191,33 +189,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
+
+                    android:layout_margin="15dp"
                     android:orientation="horizontal">
 
 
                     <TextView
-                        android:layout_width="57dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Semester :"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
 
                     <TextView
                         android:id="@+id/sem"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Sem"
-                        android:textAlignment="center"
+
                         android:textColor="@color/white"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
 
                         />
                 </LinearLayout>
@@ -225,33 +221,29 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
+
+                    android:layout_margin="15dp"
                     android:orientation="horizontal">
 
 
                     <TextView
-                        android:layout_width="106dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-
                         android:fontFamily="sans-serif-condensed"
                         android:text="Package"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
 
                     <TextView
                         android:id="@+id/pkg"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Package"
-                        android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
 
                         />
                 </LinearLayout>
@@ -294,34 +286,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
+
+                    android:layout_margin="15dp"
                     android:orientation="horizontal">
 
 
                     <TextView
-                        android:layout_width="62dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
 
                         android:fontFamily="sans-serif-condensed"
                         android:text="Students Hired :"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="15sp" />
 
 
                     <TextView
                         android:id="@+id/hired"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-
                         android:layout_weight="1"
                         android:text="hired"
-                        android:textAlignment="center"
+
                         android:textColor="@color/white"
-                        android:textSize="25sp"
+                        android:textSize="15sp"
 
                         />
                 </LinearLayout>
@@ -330,10 +319,9 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="3dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:background="#E80707" />
+
+                    android:layout_margin="15dp"
+                    android:background="#bb86fc" />
 
                 <!--        <ScrollView-->
                 <!--            android:id="@+id/scrollView"-->
@@ -344,10 +332,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
 
@@ -357,13 +344,14 @@
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="10dp"
                         android:ellipsize="end"
+                        android:lineSpacingExtra="6dp"
                         android:gravity="left"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
                         android:singleLine="false"
                         android:textColor="@color/white"
                         android:text="desc"
-                        android:textSize="25sp">
+                        android:textSize="15sp">
 
                     </TextView>
 

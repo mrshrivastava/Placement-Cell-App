@@ -4,20 +4,23 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardPreventCornerOverlap="true"
+    android:backgroundTint="@color/main_purple"
     >
+
     <LinearLayout
+        android:layout_marginBottom="0.5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:background="#0c0c0c"
-        android:paddingBottom="15dp">
+       >
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:src="@drawable/inton"
             android:id="@+id/img"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="#bb86fc"
             app:civ_border_width="2dp"
             android:layout_marginStart="10dp">
 
@@ -71,32 +74,30 @@
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:layout_weight="0.2"
+                    android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:layout_marginStart="10dp"
 
                     android:text="Batch :"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
+                    android:textSize="15sp"
                     />
 
 
                 <TextView
                     android:id="@+id/batch"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:layout_weight="0.2"
                     android:layout_height="wrap_content"
                     android:text="Batch"
-                    android:textAlignment="textStart"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     />
             </LinearLayout>
 
@@ -111,7 +112,7 @@
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
@@ -120,23 +121,21 @@
                     android:layout_marginStart="10dp"
                     android:text="Branch :"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
+                    android:textSize="15sp"
                     />
 
 
                 <TextView
                     android:id="@+id/branch"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="0.2"
                     android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
 
                     android:text="Branch"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -147,32 +146,29 @@
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_weight="0.2"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="sans-serif-condensed"
                     android:layout_marginStart="10dp"
-
                     android:text="Semester :"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
+                    android:textSize="15sp"
                     />
 
 
                 <TextView
                     android:id="@+id/sem"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="0.2"
                     android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
                     android:text="Semester"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -184,32 +180,29 @@
 
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="sans-serif-condensed"
                     android:layout_marginStart="10dp"
-
                     android:text="Package :"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
+                    android:textSize="15sp"
                     />
 
 
                 <TextView
                     android:id="@+id/pkg"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="0.2"
                     android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
                     android:text="Package"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     />
             </LinearLayout>
 
@@ -221,5 +214,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>

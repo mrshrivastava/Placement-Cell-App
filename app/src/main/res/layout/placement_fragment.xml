@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="#121212"
     tools:context=".placement_fragment"
     >
 
@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
+            android:elevation="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:paddingBottom="5dp"
@@ -38,8 +39,9 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/uploadbutton"
         android:layout_width="wrap_content"
-        android:backgroundTint="#ace2fe"
+        android:backgroundTint="#bb86fc"
         android:layout_height="wrap_content"
+        android:elevation="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="20dp"

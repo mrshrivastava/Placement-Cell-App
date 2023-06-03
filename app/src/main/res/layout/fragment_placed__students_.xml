@@ -16,14 +16,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:paddingBottom="5dp"
+
         android:overScrollMode="always">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:paddingBottom="0.5dp"
+            android:background="@color/black"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +40,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#ace2fe"
+        android:backgroundTint="#bb86fc"
         android:visibility="invisible"
         android:layout_marginEnd="20dp"
         android:clickable="true"

@@ -3,25 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardPreventCornerOverlap="true">
+    app:cardPreventCornerOverlap="true"
+    android:backgroundTint="@color/main_purple"
+
+    >
 
 
 
     <LinearLayout
+
+        android:layout_marginBottom="0.5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:background="#1F1B24"
-        android:paddingBottom="10dp">
+       >
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:src="@drawable/inton"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/img"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="#bb86fc"
             app:civ_border_width="2dp"
             android:layout_marginStart="10dp">
         </de.hdodenhof.circleimageview.CircleImageView>
@@ -51,7 +56,7 @@
                 android:textColor="@color/white"
                 android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif-condensed"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -68,7 +73,7 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_weight="0.2"
@@ -78,14 +83,13 @@
             android:layout_marginEnd="10dp"
             android:text="Company :"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="normal"
+            android:textSize="15sp"
             />
 
 
         <TextView
             android:id="@+id/company"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_height="wrap_content"
@@ -95,7 +99,7 @@
             android:layout_marginEnd="10dp"
             android:text="Company"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
              />
             </LinearLayout>
 
@@ -105,7 +109,7 @@
                 android:orientation="horizontal"
                 >
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_weight="0.2"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -115,12 +119,12 @@
                     android:layout_marginEnd="10dp"
                     android:text="Package :"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
+                    android:textSize="15sp"
+
                     />
                 <TextView
                     android:id="@+id/pkg"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_weight="0.2"
@@ -130,13 +134,15 @@
                     android:layout_marginEnd="10dp"
                     android:text="Package"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     />
             </LinearLayout>
 
 
         </LinearLayout>
 
+
     </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>
