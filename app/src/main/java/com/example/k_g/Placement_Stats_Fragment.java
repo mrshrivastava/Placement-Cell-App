@@ -60,7 +60,7 @@ public class Placement_Stats_Fragment extends Fragment {
     private Calendar calendar=Calendar.getInstance();
 
     private String  selectedyear="y"+(calendar.get(Calendar.YEAR)-1);
-
+    private CircleAnimationView circleAnimationView1,circleAnimationView2,circleAnimationView3,circleAnimationView4,circleAnimationView5;
 
     private TextView students_placed_textview, companies_came_textview, offers_textview, avg_ctc_textview, highest_ctc_textview;
 
@@ -78,7 +78,18 @@ public class Placement_Stats_Fragment extends Fragment {
         offers_textview=v.findViewById(R.id.offers);
         avg_ctc_textview=v.findViewById(R.id.avg_ctc);
         highest_ctc_textview=v.findViewById(R.id.highest_ctc);
+        circleAnimationView1 = v.findViewById(R.id.circleAnimationView1);
+        circleAnimationView2 = v.findViewById(R.id.circleAnimationView2);
+        circleAnimationView3 = v.findViewById(R.id.circleAnimationView3);
+        circleAnimationView4 = v.findViewById(R.id.circleAnimationView4);
+        circleAnimationView5=v.findViewById((R.id.circleAnimationView5));
+
         setData();
+
+
+         // Animation duration in milliseconds
+
+
 
 
         mref = FirebaseDatabase.getInstance().getReference(CollegeDatabase).child("placement_stats");
@@ -129,9 +140,20 @@ public class Placement_Stats_Fragment extends Fragment {
         return v;
     }
 
-    private void setData() {
+
+
+
+
+
+
+
+
+
+
+private void setData() {
         getData();
         int initialValue1 = 0;
+        float value=1f;
         long duration = 2000;
         avg_ctc_textview.setText(avg_ctc_offered);
         highest_ctc_textview.setText(highest_ctc_offered);
@@ -162,9 +184,16 @@ public class Placement_Stats_Fragment extends Fragment {
                 offers_textview.setText(String.valueOf(animatedValue));
             }
         });
+
         animator1.start();
         animator2.start();
         animator3.start();
+        circleAnimationView1.animateCircle(value);
+        circleAnimationView2.animateCircle(value);
+        circleAnimationView3.animateCircle(value);
+        circleAnimationView4.animateCircle(value);
+        circleAnimationView5.animateCircle(value);
+
 
 
     }

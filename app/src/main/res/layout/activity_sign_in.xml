@@ -21,6 +21,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -44,9 +45,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:startIconTint="@color/white"
             app:startIconDrawable="@drawable/baseline_school_24"
-           >
+            app:startIconTint="@color/white">
 
             <AutoCompleteTextView
                 android:id="@+id/auto_complete_txt"
@@ -107,25 +107,23 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.998"
-            android:id="@+id/signin"
-            android:layout_margin="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_background"
-            android:text="Sign-Up"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="15sp"
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/upload_button_background"
+        android:text="Sign-In"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
 
-            />
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.253" />
 
 
     <!--    <androidx.appcompat.widget.AppCompatButton-->
