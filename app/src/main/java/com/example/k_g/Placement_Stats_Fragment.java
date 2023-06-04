@@ -55,8 +55,6 @@ public class Placement_Stats_Fragment extends Fragment {
     private ArrayList<String> yearlist=new ArrayList<>();
     private ArrayAdapter<String> yearadapter;
 
-private int no_of_companies,no_of_offers,no_of_students_placed;
-private String avg_ctc_offered,highest_ctc_offered;
     private Calendar calendar=Calendar.getInstance();
 
     private String  selectedyear;
@@ -219,8 +217,6 @@ private void setData(int no_of_companies, int no_of_offers,int no_of_students_pl
                         avg_ctc_offered=String.valueOf(dataSnapshot.child("avg_ctc").getValue());
                         highest_ctc_offered=String.valueOf(dataSnapshot.child("highest_ctc").getValue());
                         setData(no_of_companies,no_of_offers,no_of_students_placed,avg_ctc_offered,highest_ctc_offered);
-
-
                     }
                 }
             }
