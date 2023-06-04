@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/campacell_logo"
+        android:icon="@mipmap/campacell_app_logo"
         android:label="CampaCell"
-        android:roundIcon="@mipmap/campacell_logo_round"
+        android:roundIcon="@mipmap/campacell_app_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KG">
         <activity

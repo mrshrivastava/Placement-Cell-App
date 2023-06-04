@@ -17,9 +17,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.281"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/campacelllogo">
+        android:src="@drawable/campacell_logo">
 
     </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -53,22 +52,22 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="80dp"
 
             android:text="A Product From IntON"
             android:textAlignment="center"
-            android:textColor="#00affe"
+            android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:layout_width="427dp"
-            android:layout_height="94dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/inton_logo1" />
+<!--        <ImageView-->
+<!--            android:layout_width="427dp"-->
+<!--            android:layout_height="94dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:src="@drawable/inton_logo1" />-->
     </LinearLayout>
 
 

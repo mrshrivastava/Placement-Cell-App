@@ -5,13 +5,13 @@
     android:layout_height="176dp"
     android:gravity="center_vertical"
 
-    android:background="#343432"
+    android:background="@color/black"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/campacelllogo"
+        android:src="@drawable/campacell_logo"
         android:paddingTop="30dp"
         android:paddingBottom="5dp"
         >
