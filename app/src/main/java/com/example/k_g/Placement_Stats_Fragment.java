@@ -55,10 +55,12 @@ public class Placement_Stats_Fragment extends Fragment {
     private ArrayList<String> yearlist=new ArrayList<>();
     private ArrayAdapter<String> yearadapter;
 
+    private int no_of_companies, no_of_offers, no_of_students_placed;
+    private String avg_ctc_offered, highest_ctc_offered;
     private Calendar calendar=Calendar.getInstance();
 
-    private String  selectedyear;
-    private CircleAnimationView circleAnimationView1,circleAnimationView2,circleAnimationView3,circleAnimationView4,circleAnimationView5;
+    private String  selectedyear="y"+(calendar.get(Calendar.YEAR)-1);
+
 
     private TextView students_placed_textview, companies_came_textview, offers_textview, avg_ctc_textview, highest_ctc_textview;
 
@@ -70,25 +72,13 @@ public class Placement_Stats_Fragment extends Fragment {
         Mail = getArguments().getString("mail");
         user=getArguments().getString("user");
         CollegeDatabase=getArguments().getString("database");
-        selectedyear="y"+(calendar.get(Calendar.YEAR)-1);
 
         students_placed_textview=v.findViewById(R.id.students_placed);
         companies_came_textview=v.findViewById(R.id.companies_came);
         offers_textview=v.findViewById(R.id.offers);
         avg_ctc_textview=v.findViewById(R.id.avg_ctc);
         highest_ctc_textview=v.findViewById(R.id.highest_ctc);
-        circleAnimationView1 = v.findViewById(R.id.circleAnimationView1);
-        circleAnimationView2 = v.findViewById(R.id.circleAnimationView2);
-        circleAnimationView3 = v.findViewById(R.id.circleAnimationView3);
-        circleAnimationView4 = v.findViewById(R.id.circleAnimationView4);
-        circleAnimationView5=v.findViewById((R.id.circleAnimationView5));
-
-        getData();
-
-
-        // Animation duration in milliseconds
-
-
+        setData();
 
 
         mref = FirebaseDatabase.getInstance().getReference(CollegeDatabase).child("placement_stats");
@@ -131,7 +121,7 @@ public class Placement_Stats_Fragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedyear="y"+adapterView.getItemAtPosition(i).toString();
-                getData();
+                setData();
 
             }
         });
@@ -139,20 +129,9 @@ public class Placement_Stats_Fragment extends Fragment {
         return v;
     }
 
-
-
-
-
-
-
-
-
-
-
-    private void setData(int no_of_companies, int no_of_offers,int no_of_students_placed,String avg_ctc_offered,String highest_ctc_offered) {
-
+    private void setData() {
+        getData();
         int initialValue1 = 0;
-        float value=1f;
         long duration = 2000;
         avg_ctc_textview.setText(avg_ctc_offered);
         highest_ctc_textview.setText(highest_ctc_offered);
@@ -183,16 +162,9 @@ public class Placement_Stats_Fragment extends Fragment {
                 offers_textview.setText(String.valueOf(animatedValue));
             }
         });
-
         animator1.start();
         animator2.start();
         animator3.start();
-        circleAnimationView1.animateCircle(value);
-        circleAnimationView2.animateCircle(value);
-        circleAnimationView3.animateCircle(value);
-        circleAnimationView4.animateCircle(value);
-        circleAnimationView5.animateCircle(value);
-
 
 
     }
@@ -208,15 +180,15 @@ public class Placement_Stats_Fragment extends Fragment {
                 if(task.isSuccessful())
                 {
                     if(task.getResult().exists())
-                    {  int no_of_companies,no_of_offers,no_of_students_placed;
-                        String avg_ctc_offered,highest_ctc_offered;
+                    {
                         DataSnapshot dataSnapshot= task.getResult();
                         no_of_companies=Integer.parseInt(String.valueOf(dataSnapshot.child("total_companies").getValue()));
                         no_of_offers=Integer.parseInt(String.valueOf(dataSnapshot.child("total_offers").getValue()));
                         no_of_students_placed=Integer.parseInt(String.valueOf(dataSnapshot.child("total_students_placed").getValue()));
                         avg_ctc_offered=String.valueOf(dataSnapshot.child("avg_ctc").getValue());
                         highest_ctc_offered=String.valueOf(dataSnapshot.child("highest_ctc").getValue());
-                        setData(no_of_companies,no_of_offers,no_of_students_placed,avg_ctc_offered,highest_ctc_offered);
+
+
                     }
                 }
             }
