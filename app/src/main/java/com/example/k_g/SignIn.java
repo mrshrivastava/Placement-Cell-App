@@ -145,84 +145,87 @@ public class SignIn extends AppCompatActivity {
 
 
         google_img.setOnClickListener(view -> {
-            int radioId=radioGroup.getCheckedRadioButtonId();
-            radioButton=findViewById(radioId);
-            selectedUser=radioButton.getText().toString();
+            if(selectedCollege.equalsIgnoreCase(""))
+            {
+                Toast.makeText(this, "Select College", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                int radioId=radioGroup.getCheckedRadioButtonId();
+                radioButton=findViewById(radioId);
+                selectedUser=radioButton.getText().toString();
 
-            mref= FirebaseDatabase.getInstance().getReference("colleges").child(selectedCollege);
+                mref= FirebaseDatabase.getInstance().getReference("colleges").child(selectedCollege);
 
-            mref.child("studentmail").addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        StudentMailFormat= dataSnapshot.getValue(String.class);
-                        // Do something with the fetched value
-                        // For example, log it or display it in a TextView
-                        Log.d("Firebase", "\n\n\n\n st mail="+StudentMailFormat);
+                mref.child("studentmail").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            StudentMailFormat= dataSnapshot.getValue(String.class);
+                            // Do something with the fetched value
+                            // For example, log it or display it in a TextView
+                            Log.d("Firebase", "\n\n\n\n st mail="+StudentMailFormat);
 
-                    } else {
-                        // Key doesn't exist
-                        Log.d("Firebase", "Key doesn't exist");
+                        } else {
+                            // Key doesn't exist
+                            Log.d("Firebase", "Key doesn't exist");
+                        }
                     }
-                }
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    // Error occurred while fetching the data
-                    Log.e("Firebase", "Error fetching value: " + databaseError.getMessage());
-                }
-            });
-
-            mref.child("database").addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        CollegeDatabase= dataSnapshot.getValue(String.class);
-                        // Do something with the fetched value
-                        // For example, log it or display it in a TextView
-
-                    } else {
-                        // Key doesn't exist
-                        Log.d("Firebase", "Key doesn't exist");
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        // Error occurred while fetching the data
+                        Log.e("Firebase", "Error fetching value: " + databaseError.getMessage());
                     }
-                }
+                });
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    // Error occurred while fetching the data
-                    Log.e("Firebase", "Error fetching value: " + databaseError.getMessage());
-                }
-            });
+                mref.child("database").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            CollegeDatabase= dataSnapshot.getValue(String.class);
+                            // Do something with the fetched value
+                            // For example, log it or display it in a TextView
 
-            mref.child("adminmail").addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        adminmail= dataSnapshot.getValue(String.class);
-                        // Do something with the fetched value
-                        // For example, log it or display it in a TextView
-
-                    } else {
-                        // Key doesn't exist
-                        Log.d("Firebase", "Key doesn't exist");
+                        } else {
+                            // Key doesn't exist
+                            Log.d("Firebase", "Key doesn't exist");
+                        }
                     }
-                }
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    // Error occurred while fetching the data
-                    Log.e("Firebase", "Error fetching value: " + databaseError.getMessage());
-                }
-            });
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        // Error occurred while fetching the data
+                        Log.e("Firebase", "Error fetching value: " + databaseError.getMessage());
+                    }
+                });
 
-            signinfunc();
-        });
-       /* google_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                mref.child("adminmail").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            adminmail= dataSnapshot.getValue(String.class);
+                            // Do something with the fetched value
+                            // For example, log it or display it in a TextView
+
+                        } else {
+                            // Key doesn't exist
+                            Log.d("Firebase", "Key doesn't exist");
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        // Error occurred while fetching the data
+                        Log.e("Firebase", "Error fetching value: " + databaseError.getMessage());
+                    }
+                });
+
                 signinfunc();
             }
-        });*/
+
+        });
+
     }
 
     private void signinfunc() {

@@ -56,8 +56,9 @@ public class ViewHolder extends RecyclerView.ViewHolder{
         mpdate.setText(pdate);
         mptime.setText(ptime);
         mdesc.setText(desc);
-        if(img!=null)
+        if(!img.equalsIgnoreCase("no img"))
         {
+            mimg.setVisibility(View.VISIBLE);
             Picasso.get().load(img).into(mimg);
         }
 

@@ -134,7 +134,8 @@ public class Upload extends AppCompatActivity {
 
             if(check==0)
             {
-                String url="https://firebasestorage.googleapis.com/v0/b/kiit-app-93db4.appspot.com/o/uploads%2F1681387683530.jpg?alt=media&token=81cd7975-350e-4e1d-8be7-320f2650ef3a";
+                String url="no img";
+                //https://firebasestorage.googleapis.com/v0/b/kiit-app-93db4.appspot.com/o/uploads%2F1681387683530.jpg?alt=media&token=81cd7975-350e-4e1d-8be7-320f2650ef3a";
                 Calendar calender=Calendar.getInstance();
                 SimpleDateFormat simpleDateFormat=new SimpleDateFormat("E, dd MMM yyyy");
                 String pdate=simpleDateFormat.format(calender.getTime());

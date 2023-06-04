@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="320dp"
             android:adjustViewBounds="true"
-
+            android:visibility="gone"
             android:src="@drawable/inton"
             android:outlineSpotShadowColor="#C1BEBE"
             android:scaleType="centerCrop"
