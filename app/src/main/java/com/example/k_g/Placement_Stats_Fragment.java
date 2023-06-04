@@ -55,7 +55,8 @@ public class Placement_Stats_Fragment extends Fragment {
     private ArrayList<String> yearlist=new ArrayList<>();
     private ArrayAdapter<String> yearadapter;
 
-
+private int no_of_companies,no_of_offers,no_of_students_placed;
+private String avg_ctc_offered,highest_ctc_offered;
     private Calendar calendar=Calendar.getInstance();
 
     private String  selectedyear;
