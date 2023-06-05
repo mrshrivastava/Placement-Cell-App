@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/black"
-    tools:context=".past_company_upload_page">
+    tools:context=".Placement_stats_upload_page">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,6 +54,22 @@
 
 
                 android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Year"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@drawable/edittext_style"
+                    android:textSize="15sp"/>
 
                 <EditText
                     android:id="@+id/total_students_placed"
@@ -136,22 +152,7 @@
                     android:padding="10dp"
                     android:textColorHint="@drawable/edittext_style"
                     android:textSize="15sp"/>
-                <EditText
-                    android:id="@+id/year"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Year"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
+
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

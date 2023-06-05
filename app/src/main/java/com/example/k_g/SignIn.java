@@ -57,6 +57,7 @@ public class SignIn extends AppCompatActivity {
     private DatabaseReference databaseReference;
 
     private String CollegeDatabase;
+    private int check=0;
 
     private AutoCompleteTextView autoCompleteTextView;
     @Override
@@ -113,7 +114,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedCollege=adapterView.getItemAtPosition(i).toString();
-
+                check=1;
             }
         });
 
@@ -145,7 +146,7 @@ public class SignIn extends AppCompatActivity {
 
 
         google_img.setOnClickListener(view -> {
-            if(selectedCollege.equalsIgnoreCase(""))
+            if(check==0)
             {
                 Toast.makeText(this, "Select College", Toast.LENGTH_SHORT).show();
             }

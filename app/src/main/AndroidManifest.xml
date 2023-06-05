@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KG">
         <activity
-            android:name=".stats_upload_page"
+            android:name=".Placement_stats_upload_page"
             android:exported="false" />
         <activity
             android:name=".past_company_upload_page"
