@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".past_company_upload_page">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="10dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/upload"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/upload_button_background"
+            android:elevation="24dp"
+            android:letterSpacing="0.05"
+            android:text="Upload"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+
+
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/total_students_placed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Number of Students Placed"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@drawable/edittext_style"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/total_companies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="No of Companies"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@drawable/edittext_style"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/total_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="No of Offers"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@drawable/edittext_style"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/avg_ctc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Average CTC"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@drawable/edittext_style"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/highest_ctc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Highest CTC"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@drawable/edittext_style"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_style"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="Year"
+                    android:letterSpacing="0.05"
+                    android:padding="10dp"
+                    android:textColorHint="@drawable/edittext_style"
+                    android:textSize="15sp"/>
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressbar"
+                    android:elevation="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible">
+
+                </ProgressBar>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

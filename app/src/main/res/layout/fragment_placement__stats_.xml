@@ -35,27 +35,23 @@
                     android:layout_marginRight="30dp"
                     android:layout_height="wrap_content"
                     app:startIconTint="@color/white"
-
+                    android:elevation="10dp"
                     android:hint="@string/selectyear"
-
                     app:startIconDrawable="@drawable/baseline_school_24"
                     android:textColorHint="@color/white"
                     android:theme="@style/LoginTextInputLayoutStyle"
                     >
-
                     <AutoCompleteTextView
+                        android:background="@drawable/edittext_style"
 
-                        android:background="#323232"
                         android:id="@+id/auto_complete_txt"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="none"
-                        android:textSize="15sp">
+                        android:textSize="15sp" />
 
-                    </AutoCompleteTextView>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -323,7 +319,6 @@
                               android:id="@+id/highest_ctc"
                               android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
-                              android:layout_marginBottom="20dp"
                               android:textColor="@color/white"
                               android:textSize="15sp"
                               android:textStyle="bold"

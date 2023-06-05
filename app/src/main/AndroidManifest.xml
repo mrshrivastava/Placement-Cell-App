@@ -12,13 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KG">
         <activity
+            android:name=".stats_upload_page"
+            android:exported="false" />
+        <activity
             android:name=".past_company_upload_page"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".placed_student_upload_page"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainPage"
             android:exported="false"
@@ -26,12 +29,11 @@
         <activity
             android:name=".Placed_Student_Postview"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Past_Company_Visited_Postview"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
         <activity
             android:name=".postview"
             android:exported="false"
