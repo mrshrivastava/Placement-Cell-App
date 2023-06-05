@@ -63,8 +63,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginBottom="20dp"
-                    app:backgroundTint="@color/gray"
-                    android:visibility="visible"
+                    app:backgroundTint="@color/main_purple"
+                    android:visibility="gone"
                     android:layout_marginEnd="20dp"
                     android:clickable="true"
                     android:src="@drawable/baseline_add_24" />

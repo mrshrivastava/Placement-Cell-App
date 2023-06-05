@@ -26,6 +26,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -89,7 +90,17 @@ public class Placement_Stats_Fragment extends Fragment {
 
          // Animation duration in milliseconds
 
+        FloatingActionButton upload=v.findViewById(R.id.uploadbutton);
 
+        if(user.equalsIgnoreCase("admin"))
+        {
+            upload.setVisibility(View.VISIBLE);
+        }
+        upload.setOnClickListener(view -> {
+            Intent intent=new Intent(getContext(),Placement_stats_upload_page.class);
+            intent.putExtra("database",CollegeDatabase);
+            startActivity(intent);
+        });
 
 
         mref = FirebaseDatabase.getInstance().getReference(CollegeDatabase).child("placement_stats");
