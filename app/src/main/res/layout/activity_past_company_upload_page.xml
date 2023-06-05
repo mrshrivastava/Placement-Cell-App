@@ -37,196 +37,214 @@
         </androidx.appcompat.widget.AppCompatButton>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/black">
-        <ScrollView
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ProgressBar>
+>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_height="wrap_content">
 
-
-
-                android:gravity="center_horizontal">
-
-                <EditText
-                    android:id="@+id/batch"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Batch"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
-                <EditText
-                    android:id="@+id/branch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Branch"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
-                <EditText
-                    android:id="@+id/company"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Company"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
-                <EditText
-                    android:id="@+id/description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Description"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
-                <EditText
-                    android:id="@+id/hired"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Hired"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
-                <EditText
-                    android:id="@+id/pkg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
 
 
-                    android:gravity="start|top"
-                    android:hint="Package"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
-                <EditText
-                    android:id="@+id/sem"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/edittext_style"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Sem"
-                    android:letterSpacing="0.05"
-                    android:padding="10dp"
-                    android:textColorHint="@drawable/edittext_style"
-                    android:textSize="15sp"/>
-                <!--                -->
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/batch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_style"
+                        android:elevation="10dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="Batch"
+                        android:letterSpacing="0.05"
+                        android:padding="10dp"
+                        android:textColorHint="@drawable/edittext_style"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_style"
+                        android:elevation="10dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="Branch"
+                        android:letterSpacing="0.05"
+                        android:padding="10dp"
+                        android:textColorHint="@drawable/edittext_style"
+                        android:textSize="15sp"
+                        android:visibility="visible"/>
+
+                    <EditText
+                        android:id="@+id/company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_style"
+                        android:elevation="10dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="Company"
+                        android:letterSpacing="0.05"
+                        android:padding="10dp"
+                        android:textColorHint="@drawable/edittext_style"
+                        android:textSize="15sp"
+                        android:visibility="visible"/>
+
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_style"
+                        android:elevation="10dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="Description"
+                        android:letterSpacing="0.05"
+                        android:padding="10dp"
+                        android:textColorHint="@drawable/edittext_style"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/hired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_style"
+                        android:elevation="10dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="Hired"
+                        android:letterSpacing="0.05"
+                        android:padding="10dp"
+                        android:textColorHint="@drawable/edittext_style"
+                        android:textSize="15sp"
+                        android:visibility="visible"/>
+
+                    <EditText
+                        android:id="@+id/pkg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_style"
+                        android:elevation="10dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+
+                        android:hint="Package"
+                        android:letterSpacing="0.05"
+                        android:padding="10dp"
+                        android:textColorHint="@drawable/edittext_style"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/sem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_style"
+                        android:elevation="10dp"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="Sem"
+                        android:letterSpacing="0.05"
+                        android:padding="10dp"
+                        android:textColorHint="@drawable/edittext_style"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+                    <!--                -->
 
 
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/addImage"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="10dp"
+                        android:letterSpacing="0.05"
+
+                        android:text="Add Image"
+                        android:textColor="@color/white"
+
+                        android:textSize="15sp"
+                        android:visibility="visible"
+
+                        >
 
 
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp"
+                        android:visibility="visible">
 
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/addImage"
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/button_background"
-                    android:letterSpacing="0.05"
+                    </ImageView>
 
 
-                    android:text="Add Image"
-
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-
-                    >
+                </LinearLayout>
+            </ScrollView>
 
 
-                </androidx.appcompat.widget.AppCompatButton>
-
-                <ImageView
-                    android:layout_width="300dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="300dp"
-                    android:id="@+id/imageview"
-                    android:layout_margin="10dp"
-                    android:elevation="10dp"
-
-                    >
-
-
-                </ImageView>
-                <ProgressBar
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/progressbar"
-                    android:elevation="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:visibility="invisible">
-
-                </ProgressBar>
-
-
-            </LinearLayout>
-        </ScrollView>
-
-
-
-
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

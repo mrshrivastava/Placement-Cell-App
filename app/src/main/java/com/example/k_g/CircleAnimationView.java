@@ -31,7 +31,7 @@ public class CircleAnimationView  extends View{
         paint = new Paint();
         paint.setColor(Color.rgb(187,184,252));
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(10f);
+        paint.setStrokeWidth(25f);
         paint.setAntiAlias(true);
         strokeWidth = paint.getStrokeWidth();
     }
