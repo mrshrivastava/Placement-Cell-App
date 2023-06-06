@@ -22,9 +22,11 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="110dp"
             android:layout_height="110dp"
+            android:elevation="11dp"
             android:src="@drawable/inton"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
+
             android:id="@+id/img"
             app:civ_border_color="#bb86fc"
             app:civ_border_width="2dp"
@@ -33,11 +35,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="112dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="-55dp"
+            android:layout_marginBottom="10dp"
+
+            android:layout_marginEnd="10dp"
+
+            android:background="@drawable/button_background"
             android:orientation="vertical"
             android:gravity="center_vertical"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp">
+            android:paddingLeft="55dp"
+
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"

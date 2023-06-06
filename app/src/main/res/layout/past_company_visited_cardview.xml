@@ -16,8 +16,10 @@
         android:background="#0c0c0c"
        >
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="11dp"
+
             android:src="@drawable/inton"
             android:id="@+id/img"
             app:civ_border_color="#bb86fc"
@@ -30,9 +32,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:orientation="vertical"
+            android:paddingLeft="75dp"
             android:gravity="center_vertical"
+            android:background="@drawable/button_background"
+            android:elevation="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="-75dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp">
 
